@@ -10,45 +10,44 @@
       >
         <b-form-group
           label-cols-sm="3"
-          label="Name:"
+          label="Username:"
           label-align-sm="right"
-          label-for="nested-street"
         >
-          <b-form-input id="nested-street"></b-form-input>
+          <b-form-input id="username"></b-form-input>
         </b-form-group>
 
         <b-form-group
           label-cols-sm="3"
           label="E-mail:"
           label-align-sm="right"
-          label-for="nested-city"
+          label-for="email"
         >
-          <b-form-input id="nested-city"></b-form-input>
+          <b-form-input id="email"></b-form-input>
         </b-form-group>
 
         <b-form-group
           label-cols-sm="3"
           label="Pasword:"
           label-align-sm="right"
-          label-for="nested-state"
+          label-for="password"
         >
-          <b-form-input id="nested-state"></b-form-input>
+          <b-form-input id="password"></b-form-input>
         </b-form-group>
 
         <b-form-group
           label-cols-sm="3"
           label="Confirm Password:"
           label-align-sm="right"
-          label-for="nested-country"
+          label-for="confirm-password"
         >
-          <b-form-input id="nested-country"></b-form-input>
+          <b-form-input id="confirm-password"></b-form-input>
         </b-form-group>
 
         <b-form-group label-cols-sm="3" label-align-sm="right">
           <b-form-checkbox
-            id="checkbox-1"
+            id="checkbox"
             v-model="status"
-            name="checkbox-1"
+            name="checkbox"
             value="accepted"
             unchecked-value="not_accepted"
           >I agree to Gameoverflow Terms and Privacy Policy</b-form-checkbox>
