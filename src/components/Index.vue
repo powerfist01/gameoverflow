@@ -6,9 +6,6 @@
 
 <script>
 export default {
-  name: "Index",
-  props: {
-    msg: String
-  }
+  name: "Index"
 };
 </script>
