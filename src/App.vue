@@ -23,10 +23,10 @@
         <!-- Right aligned nav items -->
         <b-navbar-nav class="ml-auto">
           <b-nav-form>
-            <b-form-input id="input-1" class="mr-sm-2" placeholder="Search..."></b-form-input>
-            <router-link to="/login"><b-button class="mr-sm-2" variant="outline-primary">Log in</b-button></router-link>
+            <b-form-input id="input" class="mr-sm-2" placeholder="Search..."></b-form-input> 
+            <router-link to="/login"><b-button class="mr-2 my-2 mr-sm-2" variant="outline-primary">Log in</b-button></router-link>
             
-            <router-link to="/signup"><b-button class="mr-sm-2" variant="primary">Sign up</b-button></router-link>
+            <router-link to="/signup"><b-button class="mr-2 my-2 mr-sm-2" variant="primary">Sign up</b-button></router-link>
             
           </b-nav-form>
         </b-navbar-nav>
@@ -37,16 +37,10 @@
 </template>
 
 <style scoped>
-#input-1 {
+#input{
   width: 500px;
 }
 .extra-routes {
   text-decoration: none;
-}
-.ml-auto {
-  margin-right: 300px;
-}
-.mynav {
-  margin-left: 300px;
 }
 </style>
