@@ -50,7 +50,8 @@
             name="checkbox"
             value="accepted"
             unchecked-value="not_accepted"
-          >I agree to Gameoverflow Terms and Privacy Policy</b-form-checkbox>
+            >I agree to Gameoverflow Terms and Privacy Policy</b-form-checkbox
+          >
 
           <div>
             State:
@@ -72,12 +73,11 @@ import "bootstrap-vue/dist/bootstrap-vue.css";
 export default {
   name: "Signup",
   data() {
-      return {
-        status: 'not_accepted'
-      }
-    }
+    return {
+      status: "not_accepted"
+    };
+  }
 };
 </script>
 
-<style scoped>
-</style>
+<style scoped></style>
