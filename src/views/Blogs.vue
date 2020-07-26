@@ -18,11 +18,11 @@
 </template>
 
 <script>
-  export default {
-    data() {
-      return {
-        variant: 'dark'
-      }
-    }
+export default {
+  data() {
+    return {
+      variant: "dark"
+    };
   }
+};
 </script>

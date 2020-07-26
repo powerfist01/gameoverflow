@@ -1,7 +1,7 @@
 import Vue from "vue";
 import VueRouter from "vue-router";
 import News from "../views/News.vue";
-import Index from "../components/Index.vue";
+import Index from "../views/Index.vue";
 
 Vue.use(VueRouter);
 
@@ -42,6 +42,15 @@ const routes = [
     // which is lazy-loaded when the route is visited.
     component: () =>
       import(/* webpackChunkName: "about" */ "../views/Signup.vue")
+  },
+  {
+    path: "/profile",
+    name: "Profile",
+    // route level code-splitting
+    // this generates a separate chunk (about.[hash].js) for this route
+    // which is lazy-loaded when the route is visited.
+    component: () =>
+      import(/* webpackChunkName: "about" */ "../views/Profile.vue")
   }
 ];
 

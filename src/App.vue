@@ -18,6 +18,11 @@
           <b-nav-item>
             <router-link class="extra-routes" to="/blogs">Blogs</router-link>
           </b-nav-item>
+          <b-nav-item>
+            <router-link class="extra-routes" to="/profile"
+              >Profile</router-link
+            >
+          </b-nav-item>
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
@@ -46,7 +51,11 @@
     <router-view />
   </div>
 </template>
-
+<script>
+import "bootstrap/dist/css/bootstrap.css";
+import "bootstrap-vue/dist/bootstrap-vue.css";
+export default {};
+</script>
 <style scoped>
 #input {
   width: 500px;
