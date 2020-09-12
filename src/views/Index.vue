@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="index">
     <b-carousel
       id="carousel"
       v-model="slide"
@@ -24,14 +24,9 @@
         :img-src="require('../assets/images/fifa.jpg')"
       ></b-carousel-slide>
     </b-carousel>
-    <div class="cards">
+    <b-container fluid>
+      <div class="cards">
       <b-card-group deck>
-        <b-card border-variant="secondary" header="Secondary" align="center">
-          <b-card-text
-            >Lorem ipsum dolor sit amet, consectetur adipiscing
-            elit.</b-card-text
-          >
-        </b-card>
         <b-card border-variant="secondary" header="Secondary" align="center">
           <b-card-text
             >Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -52,16 +47,23 @@
         </b-card>
       </b-card-group>
     </div>
+    </b-container>
+    <Card />
   </div>
 </template>
 
 <script>
+import Card from "@/components/Card.vue";
+
 export default {
   data() {
     return {
       slide: 0,
       sliding: null
     };
+  },
+  components: {
+    Card
   },
   methods: {
     onSlideStart() {
@@ -73,3 +75,7 @@ export default {
   }
 };
 </script>
+
+<style scoped>
+
+</style>
