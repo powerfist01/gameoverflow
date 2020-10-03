@@ -25,31 +25,13 @@
           </div>
         </div>
       </div>
-
-      <!-- <div
-        class="flashcard-mobile hidden-md hidden-lg"
-        v-bind:class="{ 'reveal-answer' : flipped }"
-      >
-        <div class="card-flipper" @click="flip(card)">
-          <div
-            class="card-question"
-            v-bind:class="{ 'reveal-answer' : flipped }"
-          >{{ card.question }}</div>
-          <div class="card-answer" v-bind:class="{ 'reveal-answer' : flipped }">
-            {{ card.hiragana_answer }}
-            <span class="text-xsmall">{{ card.romanji_answer }}</span>
-          </div>
-        </div>
-      </div> -->
-      
     </div>
   </div>
 </template>
 
 <script>
 var deck1 = [
-  { question: "心", hiragana_answer: "こころ", romanji_answer: "kokoro" },
-  { question: "凸凹", hiragana_answer: "でこぼこ", romanji_answer: "dekoboko" }
+  { question: "How are you?", hiragana_answer: "I am fine", romanji_answer: "Just do it." },
 ];
 
 export default {
