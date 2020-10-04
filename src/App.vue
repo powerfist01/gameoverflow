@@ -1,8 +1,8 @@
 <template>
   <div id="app">
-    <b-navbar toggleable="lg" type="dark" variant="dark">
+    <b-navbar toggleable="lg" type="dark" variant="light" fixed="top" class="navbar">
       <router-link class="mynav" to="/">
-        <b-navbar-brand>
+        <b-navbar-brand class="brand">
           game
           <strong>overflow</strong>
         </b-navbar-brand>
@@ -59,5 +59,11 @@ export default {};
 <style scoped>
 .extra-routes {
   text-decoration: none;
+}
+.brand{
+  color: red;
+}
+.navbar{
+  height: 50px;
 }
 </style>

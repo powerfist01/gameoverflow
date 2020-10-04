@@ -1,6 +1,6 @@
 <template>
     <div class="navbar">
-        <b-navbar toggleable="lg" type="dark" variant="dark">
+        <b-navbar toggleable="lg" type="light" variant="dark">
       <router-link class="mynav" to="/">
         <b-navbar-brand>
           game
