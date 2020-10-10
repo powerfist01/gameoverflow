@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <b-navbar toggleable="lg" type="dark" variant="light" fixed="top" class="navbar">
+    <b-navbar toggleable="lg" type="dark" variant="dark" class="navbar">
       <router-link class="mynav" to="/">
         <b-navbar-brand class="brand">
           game
@@ -13,14 +13,19 @@
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
           <b-nav-item>
-            <router-link class="extra-routes" to="/news">News</router-link>
+            <router-link class="routes" to="/news">News</router-link>
           </b-nav-item>
           <b-nav-item>
-            <router-link class="extra-routes" to="/blogs">Blogs</router-link>
+            <router-link class="routes" to="/blogs">Blogs</router-link>
           </b-nav-item>
           <b-nav-item>
-            <router-link class="extra-routes" to="/profile"
+            <router-link class="routes" to="/profile"
               >Profile</router-link
+            >
+          </b-nav-item>
+          <b-nav-item>
+            <router-link class="routes" to="/games"
+              >Games</router-link
             >
           </b-nav-item>
         </b-navbar-nav>
@@ -57,13 +62,8 @@ import "bootstrap-vue/dist/bootstrap-vue.css";
 export default {};
 </script>
 <style scoped>
-.extra-routes {
+.routes {
   text-decoration: none;
 }
-.brand{
-  color: red;
-}
-.navbar{
-  height: 50px;
-}
+
 </style>
