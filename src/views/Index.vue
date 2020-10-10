@@ -6,12 +6,14 @@
 
     <!-- <Card /> -->
     <Info />
+    <Footer />
   </div>
 </template>
 
 <script>
 import Card from "@/components/Card.vue";
 import Info from "@/components/Info.vue";
+import Footer from "@/components/Footer.vue";
 
 export default {
   data() {
@@ -19,7 +21,8 @@ export default {
   },
   components: {
     Card,
-    Info
+    Info,
+    Footer
   }
 };
 </script>
