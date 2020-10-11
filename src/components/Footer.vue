@@ -3,35 +3,44 @@
     <b-container >
       <b-row class="information">
         <b-col>
-          <h6>GAME OVERFLOW</h6>
-          <b-list-group>
-            <b-list-group-item>Questions</b-list-group-item>
-            <b-list-group-item>Jobs</b-list-group-item>
-            <b-list-group-item>Salary Calculator</b-list-group-item>
-            <b-list-group-item>Mobile</b-list-group-item>
-            <b-list-group-item>Help</b-list-group-item>
-          </b-list-group>
+          
+          <ul>
+            <h6>GAME OVERFLOW</h6>
+            <li><p>Questions</p></li>
+            <li><p>Jobs</p></li>
+            <li><p>Salary Calculator</p></li>
+            <li><p>Mobile</p></li>
+            <li><p>Help</p></li>
+          </ul>
         </b-col>
 
         <b-col>
-          <h6>PRODUCTS</h6>
-          <b-list-group>
-            <b-list-group-item>Teams</b-list-group-item>
-            <b-list-group-item>Talent</b-list-group-item>
-            <b-list-group-item>Advertising</b-list-group-item>
-            <b-list-group-item>Enterprise</b-list-group-item>
-          </b-list-group>
+          
+          <ul>
+            <h6>PRODUCTS</h6>
+            <li><p>Teams</p></li>
+            <li><p>Talent</p></li>
+            <li><p>Advertising</p></li>
+            <li><p>Enterprise</p></li>
+          </ul>
         </b-col>
 
         <b-col>
-          <h6>COMPANY</h6>
-          <b-list-group>
-            <b-list-group-item>Questions</b-list-group-item>
-            <b-list-group-item>Jobs</b-list-group-item>
-            <b-list-group-item>Morbi leo risus</b-list-group-item>
-            <b-list-group-item>Porta ac consectetur ac</b-list-group-item>
-            <b-list-group-item>Vestibulum at eros</b-list-group-item>
-          </b-list-group>
+          <ul>
+            <h6>COMPANY</h6>
+            <li><p>About</p></li>
+            <li><p>Work Here</p></li>
+            <li><p>Privacy Policy</p></li>
+            <li><p>Contact Us</p></li>
+          </ul>
+        </b-col>
+
+        <b-col>
+          <ul>
+            <h6>COMPANY</h6>
+            <li><p>Questions</p></li>
+            <li><p>Jobs</p></li>
+          </ul>
         </b-col>
 
         <b-col>
@@ -55,14 +64,18 @@ h6{
     color: #bbc0c4;
 }
 .footer {
-  height: 400px;
+  height: 300px;
   width: 100%;
-  margin-top: 200px;
   background-color: #242729;
 }
 .information{
     color: black;
-    margin-top: 100px;
     padding-top: 70px;
+}
+ul{
+  list-style-type:none;
+}
+li p{
+  font-size: 14px;
 }
 </style>

@@ -6,6 +6,7 @@
 
     <!-- <Card /> -->
     <Info />
+    <NextInfo/>
     <Footer />
   </div>
 </template>
@@ -13,6 +14,7 @@
 <script>
 import Card from "@/components/Card.vue";
 import Info from "@/components/Info.vue";
+import NextInfo from "@/components/NextInfo.vue";
 import Footer from "@/components/Footer.vue";
 
 export default {
@@ -22,6 +24,7 @@ export default {
   components: {
     Card,
     Info,
+    NextInfo,
     Footer
   }
 };
