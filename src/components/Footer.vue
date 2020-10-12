@@ -1,9 +1,8 @@
 <template>
   <div class="footer">
-    <b-container >
+    <b-container fluid="xs">
       <b-row class="information">
         <b-col>
-          
           <ul>
             <h6>GAME OVERFLOW</h6>
             <li><p>Questions</p></li>
@@ -32,14 +31,6 @@
             <li><p>Work Here</p></li>
             <li><p>Privacy Policy</p></li>
             <li><p>Contact Us</p></li>
-          </ul>
-        </b-col>
-
-        <b-col>
-          <ul>
-            <h6>COMPANY</h6>
-            <li><p>Questions</p></li>
-            <li><p>Jobs</p></li>
           </ul>
         </b-col>
 

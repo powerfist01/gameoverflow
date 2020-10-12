@@ -1,7 +1,7 @@
 <template>
   <div class="info">
     <b-container>
-      <div class="header">
+      <div class="header text-center">
         Questions are everywhere, answers are on Game Overflow
       </div>
       <div class="det text-center">

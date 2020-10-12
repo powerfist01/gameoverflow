@@ -11,37 +11,40 @@
         coworkers in private, and find your next dream job.
       </div>
 
-      <b-container class="bv-example-row info-cards">
+      <b-container class="info-cards">
         <b-row>
-          <b-col
-            ><info-card
+          <b-col>
+            <info-card
               id="info-card"
               frontType="text"
               frontTitle="Public Q&A"
-              frontData="Get answers to more than 16.5 million questions and give back by sharing your knowledge with others. Sign up for an account."
+              frontData="Sign up for an account."
               backTitle="Quote of the Day"
               backData="<i>Do you know why people like violence?</i>"
-            ></info-card
-          ></b-col>
-          <b-col
-            ><info-card
+            >
+            </info-card>
+          </b-col>
+          <b-col>
+            <info-card
               id="info-card"
               frontType="text"
               frontTitle="Latest News"
               frontData="<span> Public Q&A </span>"
               backTitle="Quote of the Day"
               backData="<i>Do you know why people like violence?</i>"
-            ></info-card
-          ></b-col>
-          <b-col
-            ><info-card
+            >
+            </info-card>
+          </b-col>
+          <b-col>
+            <info-card
               id="info-card"
               frontType="text"
               frontTitle="Blogs"
               backTitle="Quote of the Day"
               backData="<i>Do you know why people like violence?</i>"
-            ></info-card
-          ></b-col>
+            >
+            </info-card>
+          </b-col>
         </b-row>
       </b-container>
     </b-container>
@@ -55,17 +58,7 @@ export default {
     InfoCard
   },
   data() {
-    return {
-      front: {
-        title: "Daily Conversion Value",
-        graphData: [3, 2, 5, 9, 5, 10, 3, 5, 0, 0, 1, 8, 2, 9, 0]
-      },
-      back: {
-        title: "Monthly Summary",
-        message:
-          "Your average daily conversion value for this month is <b>50.4$</b>. It is below the average of the last six months."
-      }
-    };
+    return {};
   }
 };
 </script>
