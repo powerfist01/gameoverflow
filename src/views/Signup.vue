@@ -3,7 +3,7 @@
     <b-card bg-variant="light">
       <b-form-group
         label-cols-lg="3"
-        label="Sign up Here"
+        label="Join the Game Overflow community. Take your gaming to the next level. Get it seen by millions."
         label-size="lg"
         label-class="font-weight-bold pt-0"
         class="mb-0"

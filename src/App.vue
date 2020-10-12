@@ -65,5 +65,4 @@ export default {};
 .routes {
   text-decoration: none;
 }
-
 </style>
