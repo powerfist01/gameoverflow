@@ -14,11 +14,16 @@
         </b-form-group>
       </div>
     </b-sidebar>
+    <Button name='This is a Button'/>
   </div>
 </template>
 
 <script>
+import Button from "@/components/Button.vue";
 export default {
+  components:{
+    Button
+  },
   data() {
     return {
       variant: "dark"

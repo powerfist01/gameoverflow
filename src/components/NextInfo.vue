@@ -10,7 +10,7 @@
           with your team.
         </p>
         <router-link to="/signup">
-          <b-button class="cre">Create an account</b-button>
+          <Button name="Create an account" />
         </router-link>
       </div>
     </b-container>
@@ -18,7 +18,13 @@
 </template>
 
 <script>
-export default {};
+import Button from "@/components/Button.vue";
+export default {
+  name: "NextInfo",
+  components:{
+    Button
+  }
+};
 </script>
 
 <style scoped>
@@ -36,8 +42,5 @@ export default {};
 .det {
   padding-top: 40px;
 }
-.cre {
-  background-color: #f48024;
-  border-color: #f48024;
-}
+
 </style>
