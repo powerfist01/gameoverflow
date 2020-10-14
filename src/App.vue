@@ -1,6 +1,7 @@
 <template>
   <div id="app">
     <b-navbar toggleable="lg" type="dark" variant="dark" class="navbar">
+      <Menu />
       <router-link class="mynav" to="/">
         <b-navbar-brand class="brand">
           game
@@ -57,9 +58,15 @@
   </div>
 </template>
 <script>
+import Menu from "@/components/Menu.vue";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-vue/dist/bootstrap-vue.css";
-export default {};
+export default {
+  name: 'App',
+  components: {
+    Menu,
+  }
+};
 </script>
 <style scoped>
 .routes {

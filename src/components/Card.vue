@@ -110,7 +110,7 @@ export default {
   transform-style: preserve-3d;
   position: relative;
   display: inline-block;
-  width: 78%;
+  width: 80%;
   height: 100%;
 }
 .flashcard-container .card-question,

@@ -1,8 +1,8 @@
 <template>
   <div class="footer">
-    <b-container fluid="xs">
-      <b-row class="information">
-        <b-col>
+    <b-container fluid>
+      <div class="information">
+        <div class="coll">
           <ul>
             <h6>GAME OVERFLOW</h6>
             <li><p>Questions</p></li>
@@ -11,10 +11,9 @@
             <li><p>Mobile</p></li>
             <li><p>Help</p></li>
           </ul>
-        </b-col>
+        </div>
 
-        <b-col>
-          
+        <div class="coll">
           <ul>
             <h6>PRODUCTS</h6>
             <li><p>Teams</p></li>
@@ -22,9 +21,9 @@
             <li><p>Advertising</p></li>
             <li><p>Enterprise</p></li>
           </ul>
-        </b-col>
+        </div>
 
-        <b-col>
+        <div class="coll">
           <ul>
             <h6>COMPANY</h6>
             <li><p>About</p></li>
@@ -32,12 +31,12 @@
             <li><p>Privacy Policy</p></li>
             <li><p>Contact Us</p></li>
           </ul>
-        </b-col>
+        </div>
 
-        <b-col>
+        <div class="coll">
           <p>Facebook Twitter LinkedIn Instagram</p>
-        </b-col>
-      </b-row>
+        </div>
+      </div>
     </b-container>
   </div>
 </template>
@@ -47,26 +46,33 @@ export default {};
 </script>
 
 <style scoped>
-p{
-    color: #848d95;
-    font-size: 12px;
+p {
+  color: #848d95;
+  font-size: 12px;
 }
-h6{
-    color: #bbc0c4;
+h6 {
+  color: #bbc0c4;
 }
 .footer {
-  height: 300px;
-  width: 100%;
   background-color: #242729;
 }
-.information{
-    color: black;
-    padding-top: 70px;
+.information {
+  color: black;
+  padding-top: 70px;
+  z-index: 0;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
 }
-ul{
-  list-style-type:none;
+ul {
+  list-style-type: none;
 }
-li p{
+li p {
   font-size: 14px;
+}
+.coll{
+  width: 200px;
+  margin: 0px auto;
 }
 </style>

@@ -3,8 +3,8 @@
     <div>
       <b-img :src="require('../assets/images/wallpaper.jpg')" fluid></b-img>
     </div>
-
-    <!-- <Card /> -->
+    
+    <Card />
     <Info />
     <NextInfo/>
     <Footer />
