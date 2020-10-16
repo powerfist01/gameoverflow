@@ -26,8 +26,8 @@ export default {
 }
 
 #nav-icon {
-  width: 40px;
-  height: 20px;
+  width: 30px;
+  height: 15px;
   position: relative;
   margin: auto;
   -webkit-transform: rotate(0deg);
@@ -44,10 +44,10 @@ export default {
 #nav-icon span {
   display: block;
   position: absolute;
-  height: 5px;
+  height: 3px;
   width: 100%;
   background: #0575e6;
-  border-radius: 9px;
+  border-radius: 2px;
   opacity: 1;
   left: 0;
   -webkit-transform: rotate(0deg);
