@@ -6,7 +6,7 @@
       </p>
 
       <div class="question">
-        <label class="title" for="title">Title
+        <label class="label" for="title">Title
           <p class="description">
             Be specific and imagine you’re asking a question to another person
           </p>
@@ -14,9 +14,12 @@
         <b-form-input
           id="title"
           placeholder="e.g. How can I check the ping in PUBG Lite?"
+          v-model="title"
         ></b-form-input>
+
         <br>
-        <label class="title" for="body">Body
+
+        <label class="label" for="body">Body
           <p class="description">
             Include all the information someone would need to answer your question
           </p>
@@ -25,16 +28,20 @@
           id="textarea-rows"
           placeholder=""
           rows="8"
+          v-model="body"
         ></b-form-textarea>
+
         <br>
-        <label class="title" for="title">Tags
+
+        <label class="label" for="tags">Tags
           <p class="description">
             Add up to 5 tags to describe what your question is about
           </p>
         </label>
         <b-form-input
-          id="title"
+          id="tags"
           placeholder="e.g. (pubg ping pubg-lite)"
+          v-model="tags"
         ></b-form-input>
         <br>
         <NuxtLink to="/questions/review"><Button name="Review your Question" /></NuxtLink>
@@ -68,7 +75,7 @@ p.header {
   font-size: 30px;
   color: rgb(41, 40, 40);
 }
-label.title {
+label.label {
   font-size: 18px;
   font-weight: 700;
 }

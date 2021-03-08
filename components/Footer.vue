@@ -34,7 +34,12 @@
         </div>
 
         <div class="coll">
-          <p>Facebook Twitter LinkedIn Instagram</p>
+          <p>
+            <a href="https://www.facebook.com/gameoverflow">Facebook</a> 
+            <a href="https://www.linkedin.com/gameoverflow">LinkedIn</a> 
+            <a href="https://www.twitter.com/gameoverflow">Twitter</a> 
+            <a href="https://www.instagram.com/gameoverflow">Instagram</a>
+          </p>
         </div>
       </div>
     </b-container>
@@ -74,5 +79,9 @@ li p {
 .coll{
   width: 200px;
   margin: 0px auto;
+}
+a{
+  text-decoration: none;
+  color: #fff;
 }
 </style>
