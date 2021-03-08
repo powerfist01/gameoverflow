@@ -44,7 +44,7 @@
           v-model="tags"
         ></b-form-input>
         <br>
-        <NuxtLink to="/questions/review"><Button name="Review your Question" /></NuxtLink>
+        <Button v-on:click.native="reviewQuestion" name="Review your Question" />
       </div>
     </div>
   </div>
@@ -52,17 +52,31 @@
 
 <script>
 export default {
-  head: {
-    title: 'Ask a Question - Game Overflow',
-    meta: [
-      { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      {
-        hid: 'gameoverflow',
-        name: 'Game Overflow',
-        content: 'Game Overflow - Where Gamers Meet'
-      }
-    ]
+  data(){
+    return {
+      title: '',
+      body: '',
+      tags: ''
+    }
+  },
+  head() {
+    return {
+      title: 'Ask a Question - Game Overflow',
+      meta: [
+        { charset: 'utf-8' },
+        { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+        {
+          hid: 'gameoverflow',
+          name: 'Game Overflow',
+          content: 'Game Overflow - Where Gamers Meet'
+        }
+      ]
+    }
+  },
+  methods: {
+    reviewQuestion: function(){
+      this.$router.push({ path: '/questions/review' })
+    }
   }
 }
 </script>
