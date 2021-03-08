@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="info">
     <b-container fluid class="text-center info">
       <div class="header">
         For Gamers, by Gamers

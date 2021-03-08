@@ -1,7 +1,6 @@
 <template>
   <div>
-    <Info />
-    <Nextinfo />
+    <NuxtLink to="/questions/ask"><Button name="Ask a Question"/></NuxtLink>
   </div>
 </template>
 

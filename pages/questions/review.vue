@@ -1,7 +1,6 @@
 <template>
   <div>
-    <Info />
-    <Nextinfo />
+    <p>Review your question here</p>
   </div>
 </template>
 

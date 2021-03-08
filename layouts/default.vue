@@ -1,7 +1,8 @@
 <template>
-  <div>
+  <div class="default">
     <Navbar />
     <Nuxt />
+    <Footer />
   </div>
 </template>
 
@@ -9,7 +10,7 @@
 export default {
   data(){
     return {
-
+      
     }
   },
   head(){
@@ -29,5 +30,6 @@ export default {
 }
 </script>
 <style>
-
+.default{
+}
 </style>

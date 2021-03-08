@@ -1,6 +1,7 @@
 <template>
   <div>
     <b-navbar toggleable="lg" type="dark" variant="dark">
+      
       <NuxtLink class="mynav" to="/">
         <b-navbar-brand>
           game
@@ -13,10 +14,13 @@
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
           <b-nav-item>
-            <NuxtLink class="routes" to="/news">News</NuxtLink>
+            <NuxtLink to="/news">News</NuxtLink>
           </b-nav-item>
           <b-nav-item>
-            <NuxtLink class="routes" to="/blogs">Blogs</NuxtLink>
+            <NuxtLink to="/blogs">Blogs</NuxtLink>
+          </b-nav-item>
+          <b-nav-item>
+            <NuxtLink to="/dashboard">Dashboard</NuxtLink>
           </b-nav-item>
         </b-navbar-nav>
 
@@ -46,7 +50,4 @@
 
 
 <style scoped>
-.routes {
-  text-decoration: none;
-}
 </style>

@@ -1,6 +1,45 @@
 <template>
-  <div>
-    <p>Ask a public question</p>
+  <div class="main">
+    <div class="container">
+      <p class="header">
+        Ask a public question
+      </p>
+
+      <div class="question">
+        <label class="title" for="title">Title
+          <p class="description">
+            Be specific and imagine you’re asking a question to another person
+          </p>
+        </label>
+        <b-form-input
+          id="title"
+          placeholder="e.g. How can I check the ping in PUBG Lite?"
+        ></b-form-input>
+        <br>
+        <label class="title" for="body">Body
+          <p class="description">
+            Include all the information someone would need to answer your question
+          </p>
+        </label>
+        <b-form-textarea
+          id="textarea-rows"
+          placeholder=""
+          rows="8"
+        ></b-form-textarea>
+        <br>
+        <label class="title" for="title">Tags
+          <p class="description">
+            Add up to 5 tags to describe what your question is about
+          </p>
+        </label>
+        <b-form-input
+          id="title"
+          placeholder="e.g. (pubg ping pubg-lite)"
+        ></b-form-input>
+        <br>
+        <NuxtLink to="/questions/review"><Button name="Review your Question" /></NuxtLink>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -22,5 +61,19 @@ export default {
 </script>
 
 <style scoped>
-
+.container {
+  margin: 20px auto 20px auto;
+}
+p.header {
+  font-size: 30px;
+  color: rgb(41, 40, 40);
+}
+label.title {
+  font-size: 18px;
+  font-weight: 700;
+}
+p.description {
+  font-size: 12px;
+  font-weight: 500;
+}
 </style>
