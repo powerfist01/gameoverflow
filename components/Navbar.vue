@@ -4,7 +4,7 @@
       <NuxtLink class="mynav" to="/">
         <b-navbar-brand>
           game
-          <strong>overflow</strong>
+          <span>overflow</span>
         </b-navbar-brand>
       </NuxtLink>
 

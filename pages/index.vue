@@ -1,5 +1,7 @@
 <template>
   <div>
+    <Info />
+    <Nextinfo />
     <Footer />
   </div>
 </template>
@@ -10,6 +12,6 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 
 </style>
