@@ -1,13 +1,19 @@
 <template>
   <div>
-    <p>This is login page</p>
+    
   </div>
 </template>
 
 <script>
 export default {
+  data(){
+    return {
+      username: '',
+      password: ''
+    }
+  },
   head: {
-    title: 'Ask a Question - Game Overflow',
+    title: 'Log in - Game Overflow',
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
