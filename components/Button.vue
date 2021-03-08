@@ -1,3 +1,4 @@
+
 <template>
   <div>
     <button class="button">{{ name }}</button>
@@ -30,11 +31,9 @@ export default {
   background-size: 100%;
   transition: background 0s;
 }
-
 /* Button style */
 button {
   border: none;
-  width: 100px;
   border-radius: 6px;
   padding: 12px 18px;
   font-size: 16px;
