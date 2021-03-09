@@ -5,7 +5,7 @@ export const state = () => ({
 })
 
 export const mutations = {
-  addQuestion (state, text, body, tags) {
+  addQuestion (state, [text, body, tags]) {
     state.title = text;
     state.body = body;
     state.tags = tags;

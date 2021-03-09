@@ -35,8 +35,8 @@
 
         <div class="coll">
           <p>
+            <a href="https://blogs.gameoverflow.com/">Blogs</a> 
             <a href="https://www.facebook.com/gameoverflow">Facebook</a> 
-            <a href="https://www.linkedin.com/gameoverflow">LinkedIn</a> 
             <a href="https://www.twitter.com/gameoverflow">Twitter</a> 
             <a href="https://www.instagram.com/gameoverflow">Instagram</a>
           </p>
@@ -83,5 +83,8 @@ li p {
 a{
   text-decoration: none;
   color: #fff;
+}
+a:hover{
+  color: #bbc0c4;
 }
 </style>

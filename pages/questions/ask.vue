@@ -15,6 +15,7 @@
           id="title"
           placeholder="e.g. How can I check the ping in PUBG Lite?"
           v-model="title"
+          required
         ></b-form-input>
 
         <br>
@@ -29,6 +30,7 @@
           placeholder=""
           rows="8"
           v-model="body"
+          required
         ></b-form-textarea>
 
         <br>
@@ -42,6 +44,7 @@
           id="tags"
           placeholder="e.g. (pubg ping pubg-lite)"
           v-model="tags"
+          required
         ></b-form-input>
         <br>
         <Button v-on:click.native="reviewQuestion" name="Review your Question" />
@@ -75,7 +78,14 @@ export default {
   },
   methods: {
     reviewQuestion: function(){
-      this.$router.push({ path: '/questions/review' })
+      console.log(this.title, this.body, this.tags);
+      if(this.title == '' || this.body == '' || this.tags == ''){
+        alert("required fileds");
+      } else {
+        let tags = this.tags.split(' ');
+        this.$store.commit('questions/addQuestion', [this.title, this.body, tags])
+        this.$router.push({ path: '/questions/review' });
+      }
     }
   }
 }
