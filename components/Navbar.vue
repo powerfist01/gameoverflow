@@ -13,12 +13,12 @@
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
-          <b-nav-item>
+          <!-- <b-nav-item>
             <NuxtLink to="/news">News</NuxtLink>
           </b-nav-item>
           <b-nav-item>
             <NuxtLink to="/blogs">Blogs</NuxtLink>
-          </b-nav-item>
+          </b-nav-item> -->
           <b-nav-item>
             <NuxtLink to="/dashboard">Dashboard</NuxtLink>
           </b-nav-item>
@@ -29,7 +29,7 @@
           <b-nav-form inline>
             <b-form-input
               id="input"
-              class="mr-sm-2"
+              class="mr-sm-2 search"
               placeholder="Search..."
             ></b-form-input>
           </b-nav-form>
@@ -48,6 +48,8 @@
   </div>
 </template>
 
-
 <style scoped>
+.search{
+  height: 30px;
+}
 </style>

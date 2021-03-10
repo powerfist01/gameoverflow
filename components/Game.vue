@@ -2,10 +2,10 @@
   <div>
       <div class="card">
         <div class="card_image">
-          <img src="src" />
+          <img :src=src />
         </div>
         <div class="card_title title-white">
-          <p>{{ title }}</p>
+          <p>{{ title }}</p> 
         </div>
       </div>
   </div>
