@@ -32,40 +32,10 @@
           <b-form-group label-cols-sm="3">
             <b-form-group
               class="forgot"
-              v-b-modal.modal-center
               label="Forgot Password?"
               label-align-sm="left"
             ></b-form-group>
 
-            <b-modal
-              id="modal-center"
-              hide-footer="true"
-              centered
-              title="Forgot Password?"
-            >
-              <p>
-                Don't you worry, just give your email Id and we will send you a
-                link to change password.
-              </p>
-              <b-form-group
-                label-size="lg"
-                label-class="font-weight-bold pt-0"
-                class="mb-0"
-              >
-                <b-form-group
-                  label-cols-sm="2"
-                  label="Email Id:"
-                  placeholder="Email"
-                  label-align-sm="left"
-                >
-                  <b-form-input id="email" type="email"></b-form-input>
-                </b-form-group>
-
-                <b-form-group label-cols-sm="2">
-                  <b-button>Send Link</b-button>
-                </b-form-group>
-              </b-form-group>
-            </b-modal>
           </b-form-group>
         </div>
       </b-form-group>

@@ -7,7 +7,6 @@
           <b-card-text>
             {{ question.tags }}
           </b-card-text>
-
         </b-card>
       </div>
     </b-container>

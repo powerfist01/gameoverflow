@@ -30,9 +30,6 @@ export default {
 }
 </script>
 <style>
-.default{
-
-}
 a{
   text-decoration: none;
 }
