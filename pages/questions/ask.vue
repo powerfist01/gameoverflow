@@ -40,6 +40,7 @@
             Add up to 5 tags to describe what your question is about
           </p>
         </label>
+        <!-- Tags not more than 20 letters -->
         <b-form-input
           id="tags"
           placeholder="e.g. (pubg ping pubg-lite)"
