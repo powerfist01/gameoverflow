@@ -2,7 +2,6 @@
   <div>
     <b-navbar toggleable="lg" type="dark" variant="dark">
         <b-navbar-brand href="/">Game Overflow</b-navbar-brand>
-      
 
       <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
 
@@ -15,6 +14,7 @@
             <NuxtLink to="/blogs">Blogs</NuxtLink>
           </b-nav-item> -->
           <b-nav-item href="/dashboard">Dashboard</b-nav-item>
+          <b-nav-item href="/tags">Tags</b-nav-item>
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
