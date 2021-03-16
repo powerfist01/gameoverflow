@@ -3,31 +3,46 @@
     <b-container class="bv-example-row">
       <h2>Tags</h2>
       <p>A tag is a keyword or label that categorizes your question with other, similar questions. Using the right tags makes it easier for others to find and answer your question.</p>
+      <b-form-input
+        id="input"
+        class="mr-sm-2"
+        placeholder="Search a tag"
+        size="sm"
+        v-model="tagInput"
+        style="width: 250px;"
+      ></b-form-input>
+      <br>
       <b-row>
           <div v-for="_tag in allTags" :key="_tag._id">
             <b-col>
               <b-card no-body class="card">
                 <b-card-body>
-                  <b-link to="/">
+                  <NuxtLink :to="getLink(_tag.slug)">
                     <p>{{ _tag.slug }}</p>
-                  </b-link>
+                  </NuxtLink>
                   <p class="card-text">{{ _tag.name }}</p>
                 </b-card-body>
               </b-card>
             </b-col>
           </div>
       </b-row>
-      <div class="mt-3">
-      <b-pagination 
-        v-model="currentPage" 
-        :total-rows="rows"
+      <!-- <div class="mt-3">
+      <div class="overflow-auto">
+        <b-pagination-nav 
+        :link-gen="linkGen" 
+        :number-of-pages="totalPages"
+        :v-model="currentPage"
+        :hide-goto-end-buttons="true"
         prev-text="Prev"
         next-text="Next"
-        hide-goto-end-buttons=true
-        hide-ellipsis=true
-        align="right">
-      </b-pagination>
-    </div>
+        align="right"
+        size="sm"
+        :hide-ellipsis="true"
+        no-prefetch
+        use-router>
+        </b-pagination-nav>
+      </div>
+    </div> -->
     </b-container>
   </div>
 </template>
@@ -36,9 +51,10 @@
 export default {
   data() {
     return {
-      rows: 100,
-      currentPage: 3,
-      allTags: []
+      tagInput: '',
+      totalPages: "1",
+      allTags: [],
+      currentPage: 1
     };
   },
   methods: {
@@ -46,11 +62,25 @@ export default {
       this.$router.push({ path: "/questions/tagged/" + this.tag });
     },
     getTags: async function(){
-      let res = await this.$axios.get('http://localhost:8000/tags/getalltags');
-      this.allTags = res.data.splice(1,12);
+      let res = await this.$axios.get(this.$axios.defaults.baseURL + '/tags/getalltags');
+      this.totalPages = res.data['totalPages'];
+      this.allTags = res.data['tags'];
+    },
+    getLink: function(slug){
+      return '/questions/tagged/' + slug;
     }
+    // getPageTags: async function(pageNum){
+    //   console.log(pageNum)
+    //   let res = await this.$axios.get('http://localhost:8000/tags/getalltags?page=' + pageNum);
+    //   this.totalPages = res.data['totalPages'];
+    //   this.allTags = res.data['tags'];
+    // },
+    // linkGen(pageNum) {
+    //   this.getPageTags(pageNum);
+    //   return pageNum === 1 ? '?' : `?page=${pageNum}`
+    // }
   },
-  mounted(){
+  created(){
     this.getTags()
   }
 };

@@ -27,12 +27,12 @@
             ></b-form-input>
           </b-nav-form>
           <NuxtLink to="/users/login"
-            ><b-button class="mr-2 my-2 mr-sm-2" variant="outline-primary"
+            ><b-button size="sm" class="mr-2 my-2 mr-sm-2" variant="outline-primary"
               >Log in</b-button
             ></NuxtLink>
 
           <NuxtLink to="/users/signup"
-            ><b-button class="mr-2 my-2 mr-sm-2" variant="primary"
+            ><b-button size="sm" class="mr-2 my-2 mr-sm-2" variant="primary"
               >Sign up</b-button
             ></NuxtLink>
         </b-navbar-nav>
