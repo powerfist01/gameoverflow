@@ -81,8 +81,16 @@ export default {
     // }
   },
   created(){
-    this.getTags()
-  }
+    // this.getTags()
+  },
+  async fetch(){
+    let res = await this.$axios.get(this.$axios.defaults.baseURL + '/tags/getalltags');
+    this.totalPages = res.data['totalPages'];
+    this.allTags = res.data['tags'];
+  },
+  // watch: {
+  //   '$route.query': '$fetch'
+  // }
 };
 </script>
 
