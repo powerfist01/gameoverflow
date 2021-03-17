@@ -26,10 +26,10 @@
         <div class="coll">
           <ul>
             <h6>COMPANY</h6>
-            <li><p>About</p></li>
-            <li><p>Work Here</p></li>
-            <li><p>Privacy Policy</p></li>
-            <li><p>Contact Us</p></li>
+            <li><NuxtLink to="/company/about"><p>About</p></NuxtLink></li>
+            <li><NuxtLink to="/company/careers"><p>Work Here</p></NuxtLink></li>
+            <li><NuxtLink to="/company/privacy"><p>Privacy Policy</p></NuxtLink></li>
+            <li><NuxtLink to="/company/contact"><p>Contact Us</p></NuxtLink></li>
           </ul>
         </div>
 
@@ -52,8 +52,11 @@ export default {};
 
 <style scoped>
 p {
-  color: #848d95;
+  color: #fff;
   font-size: 12px;
+}
+p:hover{
+  color: #bbc0c4;
 }
 h6 {
   color: #bbc0c4;
