@@ -71,7 +71,6 @@ export default {
         usageStatistics: false,
         hideModeSwitch: true,
         toolbarItems: [
-          'heading',
           'bold',
           'italic',
           'strike',
@@ -81,8 +80,6 @@ export default {
           'divider',
           'ul',
           'ol',
-          'indent',
-          'outdent',
           'divider',
           'table',
           'link',
@@ -113,7 +110,7 @@ export default {
       } else {
         let tags = this.tags.split(' ');
         this.$store.commit('questions/addQuestion', [this.title, this.$refs.toastuiEditor.invoke('getMarkdown'), tags])
-        this.$router.push({ path: '/questions/review' });
+        this.$router.push({ path: '/questions/ask/review' });
       }
     },
     getMarkdown(){

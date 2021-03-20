@@ -1,18 +1,20 @@
 <template>
   <div>
-    <h1>Tags</h1>
-
-    <h2>Example 1</h2>
-    <a href="#" class="tag">Valorant</a>
-
-    <h2>Example 2</h2>
-    <ul class="tags">
-      <li><a href="#" class="tag">PC Games</a></li>
-      <li><a href="#" class="tag">Valorant</a></li>
-      <li><a href="#" class="tag">India</a></li>
-    </ul>
+    <a href="#" class="tag">{{ name }}</a>
   </div>
 </template>
+
+<script>
+export default {
+  name: "Tag",
+    props:{
+        name: {
+            type: String,
+            required: true
+        }
+    }
+}
+</script>
 
 <style scoped>
 .tags {
@@ -27,15 +29,15 @@
 }
 
 .tag {
-  background: rgb(138, 135, 135);
-  border-radius: 3px 0 0 3px;
-  color: rgb(255, 255, 255);
+  background: rgb(161, 205, 255);
+  border-radius: 2px 2px 2px 2px;
+  color: rgb(0, 0, 0);
   display: inline-block;
   height: 26px;
   line-height: 26px;
   padding: 0 20px 0 23px;
   position: relative;
-  margin: 0 10px 10px 0;
+  margin: 0 5px 5px 0;
   text-decoration: none;
 }
 
@@ -51,23 +53,9 @@
   top: 10px;
 }
 
-.tag::after {
-  background: #fff;
-  border-bottom: 13px solid transparent;
-  border-left: 10px solid rgb(255, 255, 255);
-  border-top: 13px solid transparent;
-  content: "";
-  position: absolute;
-  right: 0;
-  top: 0;
-}
-
 .tag:hover {
-  background-color: rgb(104, 159, 195);
-  color: white;
+  background-color: rgb(111, 178, 255);
+  color: rgb(0, 0, 0);
 }
 
-.tag:hover::after {
-  border-left-color: rgb(104, 159, 195);
-}
 </style>

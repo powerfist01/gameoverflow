@@ -1,14 +1,22 @@
 <template>
   <div class="container">
     <p class="header">Review question</p>
-    {{ question.title }}
+    <p class="title">
+      {{ question.title }}
+    </p>
+    
     <br>
-    <client-only>
-      <Viewer
-        ref="toastuiEditor"
-        :initialValue = question.body
-      />
-    </client-only>
+
+    <b-card no-body class="text">
+      <div class="bg">
+        <client-only>
+          <Viewer
+            ref="toastuiEditor"
+            :initialValue = question.body
+          />
+        </client-only>
+      </div>
+    </b-card>
     <br>
     {{ question.tags }}
   </div>
@@ -32,5 +40,12 @@ export default {
 p.header{
   font-weight: 600;
   font-size: 30px;
+}
+p.title{
+  font-size: 25px;
+  font-weight: 500;
+}
+.bg{
+  background-color: #f7f6f9;
 }
 </style>

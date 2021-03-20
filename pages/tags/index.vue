@@ -17,9 +17,10 @@
             <b-col>
               <b-card no-body class="card">
                 <b-card-body>
-                  <NuxtLink :to="getLink(_tag.slug)">
+                  <!-- <NuxtLink :to="getLink(_tag.slug)">
                     <p>{{ _tag.slug }}</p>
-                  </NuxtLink>
+                  </NuxtLink> -->
+                  <Tag :name=_tag.slug />
                   <p class="card-text">{{ _tag.name }}</p>
                 </b-card-body>
               </b-card>
@@ -53,7 +54,28 @@ export default {
     return {
       tagInput: '',
       totalPages: "1",
-      allTags: [],
+      allTags: [{
+        slug: "pubg",
+        name: "pubg"
+      },
+      {
+        slug: "pubg",
+        name: "pubg"
+      },
+      {
+        slug: "pubg",
+        name: "pubg"
+      },
+
+      {
+        slug: "pubg",
+        name: "pubg"
+      },
+      {
+        slug: "pubg",
+        name: "pubg"
+      },
+      ],
       currentPage: 1
     };
   },
@@ -83,11 +105,11 @@ export default {
   created(){
     // this.getTags()
   },
-  async fetch(){
-    let res = await this.$axios.get(this.$axios.defaults.baseURL + '/tags/getalltags');
-    this.totalPages = res.data['totalPages'];
-    this.allTags = res.data['tags'];
-  },
+  // async fetch(){
+  //   let res = await this.$axios.get(this.$axios.defaults.baseURL + '/tags/getalltags');
+  //   this.totalPages = res.data['totalPages'];
+  //   this.allTags = res.data['tags'];
+  // },
   // watch: {
   //   '$route.query': '$fetch'
   // }
