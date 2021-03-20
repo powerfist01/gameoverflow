@@ -5,21 +5,20 @@
         <div class="coll">
           <ul>
             <h6>GAME OVERFLOW</h6>
-            <li><p>Questions</p></li>
-            <li><p>Jobs</p></li>
-            <li><p>Salary Calculator</p></li>
-            <li><p>Mobile</p></li>
-            <li><p>Help</p></li>
+            <li><NuxtLink to="/questions"><p>Questions</p></NuxtLink></li>
+            <li><NuxtLink to="/jobs"><p>Jobs</p></NuxtLink></li>
+            <li><NuxtLink to="/mobile"><p>Mobile</p></NuxtLink></li>
+            <li><NuxtLink to="/help"><p>Help</p></NuxtLink></li>
           </ul>
         </div>
 
         <div class="coll">
           <ul>
             <h6>PRODUCTS</h6>
-            <li><p>Teams</p></li>
-            <li><p>Talent</p></li>
-            <li><p>Advertising</p></li>
-            <li><p>Enterprise</p></li>
+            <li><NuxtLink to="/products/teams"><p>Teams</p></NuxtLink></li>
+            <li><NuxtLink to="/products/talents"><p>Talent</p></NuxtLink></li>
+            <li><NuxtLink to="/products/advertisement"><p>Advertising</p></NuxtLink></li>
+            <li><NuxtLink to="/products/enterprise"><p>Enterprise</p></NuxtLink></li>
           </ul>
         </div>
 
@@ -51,6 +50,9 @@ export default {};
 </script>
 
 <style scoped>
+.footer{
+  bottom: 0px;
+}
 p {
   color: #fff;
   font-size: 12px;

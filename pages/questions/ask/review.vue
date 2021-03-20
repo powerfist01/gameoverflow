@@ -1,8 +1,15 @@
 <template>
-  <div>
-    <p>Review your question here</p>
+  <div class="container">
+    <p class="header">Review question</p>
     {{ question.title }}
-    {{ question.body }}
+    <br>
+    <client-only>
+      <Viewer
+        ref="toastuiEditor"
+        :initialValue = question.body
+      />
+    </client-only>
+    <br>
     {{ question.tags }}
   </div>
 </template>
@@ -15,7 +22,6 @@ export default {
       question['title'] = this.$store.state.questions.title;
       question['body'] = this.$store.state.questions.body;
       question['tags'] = this.$store.state.questions.tags;
-      console.log(question)
       return question;
     }
   },
@@ -23,5 +29,8 @@ export default {
 </script>
 
 <style scoped>
-
+p.header{
+  font-weight: 600;
+  font-size: 30px;
+}
 </style>

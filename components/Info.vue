@@ -39,6 +39,7 @@ export default {
   height: 8px;
   text-align: center;
   background-color: #f48024;
+  /* color: #7F00FF; */
   border-radius: 10px 10px 10px 10px;
 }
 .content {

@@ -16,6 +16,7 @@
           placeholder="e.g. How can I check the ping in PUBG Lite?"
           v-model="title"
           required
+          size="sm"
         ></b-form-input>
 
         <br>
@@ -25,14 +26,14 @@
             Include all the information someone would need to answer your question
           </p>
         </label>
-        <b-form-textarea
-          id="textarea-rows"
-          placeholder=""
-          rows="8"
-          v-model="body"
-          required
-        ></b-form-textarea>
-
+        <client-only>
+          <editor
+            ref="toastuiEditor"
+            :options="editorOptions"
+            initialEditType='wysiwyg'
+            class="editor"
+          />
+        </client-only>
         <br>
 
         <label class="label" for="tags">Tags
@@ -40,12 +41,13 @@
             Add up to 5 tags to describe what your question is about
           </p>
         </label>
-        <!-- Tags not more than 20 letters -->
+        <!-- Tag not more than 20 letters -->
         <b-form-input
           id="tags"
           placeholder="e.g. (pubg ping pubg-lite)"
           v-model="tags"
           required
+          size="sm"
         ></b-form-input>
         <br>
         <Button v-on:click.native="reviewQuestion" name="Review your Question" />
@@ -60,7 +62,34 @@ export default {
     return {
       title: '',
       body: '',
-      tags: ''
+      tags: '',
+      editorOptions: {
+        minHeight: '200px',
+        language: 'en-US',
+        useCommandShortcut: true,
+        useDefaultHTMLSanitizer: true,
+        usageStatistics: false,
+        hideModeSwitch: true,
+        toolbarItems: [
+          'heading',
+          'bold',
+          'italic',
+          'strike',
+          'divider',
+          'hr',
+          'quote',
+          'divider',
+          'ul',
+          'ol',
+          'indent',
+          'outdent',
+          'divider',
+          'table',
+          'link',
+          'divider',
+          'code'
+        ]
+      }
     }
   },
   head() {
@@ -79,14 +108,19 @@ export default {
   },
   methods: {
     reviewQuestion: function(){
-      console.log(this.title, this.body, this.tags);
-      if(this.title == '' || this.body == '' || this.tags == ''){
+      if(this.title == '' || this.$refs.toastuiEditor.invoke('getMarkdown') == '' || this.tags == ''){
         alert("required fileds");
       } else {
         let tags = this.tags.split(' ');
-        this.$store.commit('questions/addQuestion', [this.title, this.body, tags])
+        this.$store.commit('questions/addQuestion', [this.title, this.$refs.toastuiEditor.invoke('getMarkdown'), tags])
         this.$router.push({ path: '/questions/review' });
       }
+    },
+    getMarkdown(){
+      let mark = this.$refs.toastuiEditor.invoke('getMarkdown');
+      if(this.$refs.toastuiEditor.invoke('getMarkdown'))
+        alert("hello")
+      console.log(mark);
     }
   }
 }
@@ -98,6 +132,7 @@ export default {
 }
 p.header {
   font-size: 30px;
+  font-weight: 600;
   color: rgb(41, 40, 40);
 }
 label.label {
