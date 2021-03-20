@@ -88,9 +88,6 @@ export default {
       this.totalPages = res.data['totalPages'];
       this.allTags = res.data['tags'];
     },
-    getLink: function(slug){
-      return '/questions/tagged/' + slug;
-    }
     // getPageTags: async function(pageNum){
     //   console.log(pageNum)
     //   let res = await this.$axios.get('http://localhost:8000/tags/getalltags?page=' + pageNum);

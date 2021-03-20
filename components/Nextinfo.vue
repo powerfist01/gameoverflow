@@ -34,7 +34,7 @@ export default {
   background-color: #f7f6f9;
 }
 .header {
-  font-size: 40px;
+  font-size: 30px;
   font-family: Georgia, "Times New Roman", Times, serif;
   color: black;
   font-weight: 700;

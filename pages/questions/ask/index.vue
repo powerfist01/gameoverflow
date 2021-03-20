@@ -1,7 +1,7 @@
 <template>
-  <div class="main">
+  <div>
     <div class="container">
-      <p class="header">
+      <p class="section">
         Ask a public question
       </p>
 
@@ -127,7 +127,7 @@ export default {
 .container {
   margin: 20px auto 20px auto;
 }
-p.header {
+p.section {
   font-size: 30px;
   font-weight: 600;
   color: rgb(41, 40, 40);

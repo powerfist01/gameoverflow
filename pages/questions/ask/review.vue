@@ -1,51 +1,79 @@
 <template>
   <div class="container">
-    <p class="header">Review question</p>
-    <p class="title">
-      {{ question.title }}
-    </p>
-    
-    <br>
-
-    <b-card no-body class="text">
-      <div class="bg">
-        <client-only>
-          <Viewer
-            ref="toastuiEditor"
-            :initialValue = question.body
-          />
-        </client-only>
-      </div>
-    </b-card>
-    <br>
-    {{ question.tags }}
+    <div class="header">
+      <p class="section">Review question</p>
+    </div>
+    <div class="question">
+      <p class="title">
+        {{ questionTitle }}
+      </p>
+      <b-card no-body class="text">
+        <div class="bg">
+          <client-only>
+            <Viewer
+              ref="toastuiEditor"
+              :initialValue = questionBody
+            />
+          </client-only>
+        </div>
+      </b-card>
+      <br>
+      <TagArr :tags=questionTags />
+    </div>
+    <div class="submit">
+      <b-button @click="askQuestion" size="sm">Submit</b-button>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  computed: {
-    question () {
-      let question = {};
-      question['title'] = this.$store.state.questions.title;
-      question['body'] = this.$store.state.questions.body;
-      question['tags'] = this.$store.state.questions.tags;
-      return question;
+  data(){
+    return {
+      questionTitle: '',
+      questionBody: '',
+      questionTags: []
     }
   },
+  async fetch(){
+    this.questionTitle = this.$store.state.questions.title;
+    this.questionBody = this.$store.state.questions.body;
+    this.questionTags = this.$store.state.questions.tags;
+  },
+  methods: {
+    async askQuestion(){
+      console.log(this.questionTitle);
+      let payload = {
+        title: this.questionTitle,
+        body: this.questionBody,
+        tags: this.questionTags
+      }
+      let askQuestion = await this.$axios.post(this.$axios.defaults.baseURL + '/questions/addQuestion', payload);
+      askQuestion.then(function(res){
+        console.log(res)
+      }).catch(function(err){
+        alert(err);
+      })
+    }
+  }
 }
 </script>
 
 <style scoped>
-p.header{
+.container {
+  margin: 20px auto 20px auto;
+}
+p.section{
   font-weight: 600;
   font-size: 30px;
 }
 p.title{
   font-size: 25px;
-  font-weight: 500;
 }
 .bg{
   background-color: #f7f6f9;
+}
+.submit{
+  margin-top: 10px;
 }
 </style>

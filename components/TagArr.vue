@@ -1,18 +1,25 @@
 <template>
   <div>
-    <a href="#" class="tag">{{ name }}</a>
+    <ul class="tags">
+      <li v-for="tag in tags" :key="tag"><a :href="getLinkUsingTag(tag)" class="tag">{{ tag }}</a></li>
+    </ul>
   </div>
 </template>
 
 <script>
 export default {
   name: "Tag",
-    props:{
-        name: {
-            type: String,
-            required: true
-        }
+  props:{
+      tags: {
+          type: Array,
+          required: true
+      }
+  },
+  methods: {
+    getLinkUsingTag(tag){
+      return '/questions/tagged/' + tag;
     }
+  }
 }
 </script>
 

@@ -15,6 +15,7 @@
           </b-nav-item> -->
           <b-nav-item href="/dashboard">Dashboard</b-nav-item>
           <b-nav-item href="/questions">Questions</b-nav-item>
+          <b-nav-item href="/tags">Tags</b-nav-item>
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
