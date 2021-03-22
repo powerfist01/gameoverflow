@@ -48,12 +48,9 @@ export default {
         body: this.questionBody,
         tags: this.questionTags
       }
-      let askQuestion = await this.$axios.post(this.$axios.defaults.baseURL + '/questions/addQuestion', payload);
-      askQuestion.then(function(res){
-        console.log(res)
-      }).catch(function(err){
-        alert(err);
-      })
+      let askQuestion = await this.$axios.post(this.$axios.defaults.baseURL + '/questions/ask', payload);
+      console.log(askQuestion);
+      this.$router.push({ path: '/dashboard' });
     }
   }
 }
