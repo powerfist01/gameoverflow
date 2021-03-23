@@ -60,12 +60,8 @@ export default {
 .container {
   margin: 20px auto 20px auto;
 }
-p.section{
-  font-weight: 600;
-  font-size: 30px;
-}
 p.title{
-  font-size: 25px;
+  font-size: 34px;
 }
 .bg{
   background-color: #f7f6f9;

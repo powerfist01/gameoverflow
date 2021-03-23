@@ -8,8 +8,7 @@
       <div class="question">
         <label class="label" for="title">Title
           <p class="description">
-            Be specific and imagine you’re asking a question to another person <br>
-            <span style="display: none">this is just a test</span>
+            Be specific and imagine you’re asking a question to another person
           </p>
         </label>
         <b-form-input
@@ -19,7 +18,7 @@
           required
           size="sm"
         ></b-form-input>
-
+        <p class="required" v-if="errorTitle">* Please enter valid title of the question.</p>
         <br>
 
         <label class="label" for="body">Body
@@ -35,6 +34,7 @@
             class="editor"
           />
         </client-only>
+        <p class="required" v-if="errorBody">* Please enter valid body of the question.</p>
         <br>
 
         <label class="label" for="tags">Tags
@@ -50,6 +50,7 @@
           required
           size="sm"
         ></b-form-input>
+        <p class="required" v-if="errorTag">* Please enter valid tags of the question.</p>
         <br>
         <Button v-on:click.native="reviewQuestion" name="Review your Question" />
       </div>
@@ -64,6 +65,9 @@ export default {
       title: '',
       body: '',
       tags: '',
+      errorTag: false,
+      errorTitle: false,
+      errorBody: false,
       sanitizedTags: [],
       editorOptions: {
         minHeight: '200px',
@@ -107,7 +111,7 @@ export default {
   },
   methods: {
     isInputValid(){
-      if(this.isTagsValid() && this.isBodyValid() && this.isTitleValid()){
+      if(this.isTitleValid() && this.isBodyValid() && this.isTagsValid()){
         return true;
       }
       else
@@ -115,6 +119,7 @@ export default {
     },
     isTitleValid(){
       if(this.title.trim() == ''){
+        this.errorTitle = true;
         return false;
       }
       else
@@ -122,6 +127,7 @@ export default {
     },
     isBodyValid(){
       if(this.$refs.toastuiEditor.invoke('getMarkdown').trim() == ''){
+        this.errorBody = true;
         return false;
       }
       else
@@ -138,6 +144,7 @@ export default {
         this.sanitizedTags = Array.from(sanitizedTags);
         return true;
       } else {
+        this.errorTag = true;
         return false;
       }
     },
@@ -164,11 +171,6 @@ export default {
 .container {
   margin: 20px auto 20px auto;
 }
-p.section {
-  font-size: 30px;
-  font-weight: 600;
-  color: rgb(41, 40, 40);
-}
 label.label {
   font-size: 18px;
   font-weight: 700;
@@ -176,5 +178,11 @@ label.label {
 p.description {
   font-size: 12px;
   font-weight: 500;
+  margin-bottom: 0px;
+}
+p.required{
+  font-size: 12px;
+  color: rgb(207, 0, 0);
+  margin-bottom: 0px;
 }
 </style>

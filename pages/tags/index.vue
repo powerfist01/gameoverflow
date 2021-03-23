@@ -1,7 +1,7 @@
 <template>
   <div>
     <b-container class="bv-example-row">
-      <h2>Tags</h2>
+      <p class="section">Tags</p>
       <p>A tag is a keyword or label that categorizes your question with other, similar questions. Using the right tags makes it easier for others to find and answer your question.</p>
       <b-form-input
         id="input"
@@ -20,8 +20,8 @@
                   <!-- <NuxtLink :to="getLink(_tag.slug)">
                     <p>{{ _tag.slug }}</p>
                   </NuxtLink> -->
-                  <Tag :name=_tag.slug />
-                  <p class="card-text">{{ _tag.name }}</p>
+                  <Tag :name=_tag.name />
+                  <!-- <p class="card-text">{{ _tag.name }}</p> -->
                 </b-card-body>
               </b-card>
             </b-col>
@@ -102,11 +102,11 @@ export default {
   created(){
     // this.getTags()
   },
-  // async fetch(){
-  //   let res = await this.$axios.get(this.$axios.defaults.baseURL + '/tags/getalltags');
-  //   this.totalPages = res.data['totalPages'];
-  //   this.allTags = res.data['tags'];
-  // },
+  async fetch(){
+    let res = await this.$axios.get(this.$axios.defaults.baseURL + '/tags/getalltags');
+    // this.totalPages = res.data['totalPages'];
+    this.allTags = res.data['tags'];
+  },
   // watch: {
   //   '$route.query': '$fetch'
   // }

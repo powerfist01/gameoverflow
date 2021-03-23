@@ -31,5 +31,12 @@ export default {
 }
 </script>
 <style>
-
+p.section {
+  font-size: 34px;
+  font-weight: 600;
+  color: rgb(41, 40, 40);
+}
+.container{
+  width: 1000px;
+}
 </style>
