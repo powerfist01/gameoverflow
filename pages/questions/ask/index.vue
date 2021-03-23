@@ -63,6 +63,7 @@ export default {
       title: '',
       body: '',
       tags: '',
+      sanitizedTags: [],
       editorOptions: {
         minHeight: '200px',
         language: 'en-US',
@@ -104,13 +105,46 @@ export default {
     }
   },
   methods: {
-    reviewQuestion: function(){
-      if(this.title == '' || this.$refs.toastuiEditor.invoke('getMarkdown') == '' || this.tags == ''){
-        alert("required fileds");
+    async isInputValid(){
+      if(this.isTitleValid() && this.isBodyValid() && this.isTagsValid())
+        return true;
+      else
+        return false;
+    },
+    async isTitleValid(){
+      if(this.title.trim() == '')
+        return false;
+      else
+        return true;
+    },
+    async isBodyValid(){
+      if(this.$refs.toastuiEditor.invoke('getMarkdown').trim() == '')
+        return false;
+      else
+        return true;
+    },
+    async isTagsValid(){
+      let tags = this.tags.trim().split(' ');
+      let sanitizedTags = new Set();
+      tags.forEach(function(tag){
+        if(tag.trim())
+          sanitizedTags.add(tag);
+      })
+      // console.log(sanitizedTags);
+
+      if(sanitizedTags.size > 5){
+        alert('only 5 tags ')
+        return false;
       } else {
-        let tags = this.tags.split(' ');
-        this.$store.commit('questions/addQuestion', [this.title, this.$refs.toastuiEditor.invoke('getMarkdown'), tags])
-        this.$router.push({ path: '/questions/ask/review' });
+        this.sanitizedTags = new Array(sanitizedTags);
+        return true;
+      }
+    },
+    reviewQuestion: function(){
+      if(this.isInputValid() == true){
+        console.log("===============",this.title, this.$refs.toastuiEditor.invoke('getMarkdown'), this.sanitizedTags)
+        this.$store.commit('questions/addQuestion', [this.title, this.$refs.toastuiEditor.invoke('getMarkdown'), this.sanitizedTags])
+        // this.$router.push({ path: '/questions/ask/review' });
       }
     },
     getMarkdown(){
