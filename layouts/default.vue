@@ -1,6 +1,7 @@
 <template>
   <div class="default">
     <Navbar />
+    <notifications :max="3" position="top center" :width="400" />
     <Nuxt />
     <Footer />
   </div>
@@ -30,7 +31,5 @@ export default {
 }
 </script>
 <style>
-a{
-  text-decoration: none;
-}
+
 </style>

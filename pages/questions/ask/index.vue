@@ -8,7 +8,8 @@
       <div class="question">
         <label class="label" for="title">Title
           <p class="description">
-            Be specific and imagine you’re asking a question to another person
+            Be specific and imagine you’re asking a question to another person <br>
+            <span style="display: none">this is just a test</span>
           </p>
         </label>
         <b-form-input
@@ -105,53 +106,55 @@ export default {
     }
   },
   methods: {
-    async isInputValid(){
-      if(this.isTitleValid() && this.isBodyValid() && this.isTagsValid())
+    isInputValid(){
+      if(this.isTagsValid() && this.isBodyValid() && this.isTitleValid()){
         return true;
+      }
       else
         return false;
     },
-    async isTitleValid(){
-      if(this.title.trim() == '')
+    isTitleValid(){
+      if(this.title.trim() == ''){
         return false;
+      }
       else
         return true;
     },
-    async isBodyValid(){
-      if(this.$refs.toastuiEditor.invoke('getMarkdown').trim() == '')
+    isBodyValid(){
+      if(this.$refs.toastuiEditor.invoke('getMarkdown').trim() == ''){
         return false;
+      }
       else
         return true;
     },
-    async isTagsValid(){
+    isTagsValid(){
       let tags = this.tags.trim().split(' ');
       let sanitizedTags = new Set();
       tags.forEach(function(tag){
         if(tag.trim())
           sanitizedTags.add(tag);
       })
-      // console.log(sanitizedTags);
-
-      if(sanitizedTags.size > 5){
-        alert('only 5 tags ')
-        return false;
-      } else {
-        this.sanitizedTags = new Array(sanitizedTags);
+      if(sanitizedTags.size > 0 && sanitizedTags.size <= 5){
+        this.sanitizedTags = Array.from(sanitizedTags);
         return true;
+      } else {
+        return false;
       }
     },
     reviewQuestion: function(){
-      if(this.isInputValid() == true){
-        console.log("===============",this.title, this.$refs.toastuiEditor.invoke('getMarkdown'), this.sanitizedTags)
+      if(this.isInputValid()){
+        console.log("fhfhh")
         this.$store.commit('questions/addQuestion', [this.title, this.$refs.toastuiEditor.invoke('getMarkdown'), this.sanitizedTags])
-        // this.$router.push({ path: '/questions/ask/review' });
+        this.$router.push({ path: '/questions/ask/review' });
       }
     },
     getMarkdown(){
       let mark = this.$refs.toastuiEditor.invoke('getMarkdown');
-      if(this.$refs.toastuiEditor.invoke('getMarkdown'))
-        alert("hello")
-      console.log(mark);
+      if(mark)
+       console.log(mark);
+    },
+    notify(title, text, type){
+      this.$notify({title: title, text: text, type: type, duration: 3000, speed: 1000})
     }
   }
 }
