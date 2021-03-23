@@ -34,8 +34,8 @@ export default {
   color: rgb(0, 0, 0);
   display: inline-block;
   font-size: 12px;
-  height: 26px;
-  line-height: 26px;
+  height: 22px;
+  line-height: 22px;
   padding: 0 8px 0 15px;
   position: relative;
   margin: 0 5px 5px 0;
@@ -51,7 +51,7 @@ export default {
   left: 6px;
   position: absolute;
   width: 5px;
-  top: 10px;
+  top: 8px;
 }
 
 .tag:hover {

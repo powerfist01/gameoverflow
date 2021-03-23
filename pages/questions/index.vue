@@ -7,7 +7,7 @@
       <div v-for="question in questions" :key="question._id">
         <b-card class="summary">
           <b-row>
-            <b-col cols="1">
+            <b-col cols="2">
               <div class="stats">
                 <div class="vote">
                   <div class="votes">
@@ -21,22 +21,20 @@
                     <p class="stat-name">answers</p>
                   </div>
                 </div>
+                <div class="view">
+                  <div class="views">
+                    <p class="stat-name" style="margin-bottom: 0px;">1112 views</p>
+                  </div>
+                </div>
               </div>
             </b-col>
             <b-col cols="10">
               <div class="main">
                 <b-card-title class="title"><NuxtLink to="#">{{ question.title }}</NuxtLink></b-card-title>
-                <b-card-text>
-                  This card has supporting text below as a natural lead-in to additional content.
-                </b-card-text>
                 <TagArr :tags=question.tags />
-                <b-card-text class="small text-muted" align="right">
-                  <!-- <div class="created-at">
-                    {{ question.createdAt }}
-                  </div> -->
-                  <div class="author">
-                    <b-avatar></b-avatar> &nbsp;<span>{{ question.author }}</span>
-                  </div>
+                <b-card-text class="text-muted small" align="right">
+                  {{ question.createdAt }} <br>
+                  {{ question.author }}
                 </b-card-text>
               </div>
             </b-col>
@@ -67,13 +65,6 @@ export default {
 }
 .title{
   font-size: 16px;
-}
-.views {
-  border-radius: 5px;
-  border: 2px solid #73AD21;
-  padding: 20px;
-  width: 50px;
-  height: 50px;
 }
 .stats{
   text-align: center;

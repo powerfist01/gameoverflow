@@ -54,40 +54,19 @@ export default {
     return {
       tagInput: '',
       totalPages: "1",
-      allTags: [{
-        slug: "pubg",
-        name: "pubg"
-      },
-      {
-        slug: "pubg",
-        name: "pubg"
-      },
-      {
-        slug: "pubg",
-        name: "pubg"
-      },
-
-      {
-        slug: "pubg",
-        name: "pubg"
-      },
-      {
-        slug: "pubg",
-        name: "pubg"
-      },
-      ],
+      allTags: [],
       currentPage: 1
     };
   },
   methods: {
-    getTaggedQuestions: function () {
-      this.$router.push({ path: "/questions/tagged/" + this.tag });
-    },
-    getTags: async function(){
-      let res = await this.$axios.get(this.$axios.defaults.baseURL + '/tags/getalltags');
-      this.totalPages = res.data['totalPages'];
-      this.allTags = res.data['tags'];
-    },
+    // getTaggedQuestions: function () {
+    //   this.$router.push({ path: "/questions/tagged/" + this.tag });
+    // },
+    // getTags: async function(){
+    //   let res = await this.$axios.get(this.$axios.defaults.baseURL + '/tags/getalltags');
+    //   this.totalPages = res.data['totalPages'];
+    //   this.allTags = res.data['tags'];
+    // },
     // getPageTags: async function(pageNum){
     //   console.log(pageNum)
     //   let res = await this.$axios.get('http://localhost:8000/tags/getalltags?page=' + pageNum);
@@ -98,9 +77,6 @@ export default {
     //   this.getPageTags(pageNum);
     //   return pageNum === 1 ? '?' : `?page=${pageNum}`
     // }
-  },
-  created(){
-    // this.getTags()
   },
   async fetch(){
     let res = await this.$axios.get(this.$axios.defaults.baseURL + '/tags/getalltags');
@@ -119,7 +95,7 @@ a{
 }
 .card{
   height: 150px;
-  width: 250px;
+  width: 215px;
   margin-right: 5px;
   margin-bottom: 10px;
 }
