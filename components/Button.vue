@@ -1,7 +1,6 @@
-
 <template>
   <div>
-    <button class="button">{{ name }}</button>
+    <button class="button" @click="getToLink(to)">{{ name }}</button>
   </div>
 </template>
 
@@ -12,7 +11,16 @@ export default {
         name: {
             type: String,
             required: true,
+        },
+        to: {
+          type: String,
+          required: false
         }
+    },
+    methods: {
+      getToLink(to){
+        this.$router.push({path: to})
+      }
     }
 };
 </script>
@@ -34,9 +42,9 @@ export default {
 /* Button style */
 button {
   border: none;
-  border-radius: 6px;
-  padding: 12px 18px;
-  font-size: 16px;
+  border-radius: 3px;
+  padding: 12px 12px;
+  font-size: 14px;
   cursor: pointer;
   color: white;
   background-color: #0575E6;

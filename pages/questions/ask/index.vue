@@ -152,7 +152,7 @@ export default {
       if(this.isInputValid()){
         console.log("fhfhh")
         this.$store.commit('questions/addQuestion', [this.title, this.$refs.toastuiEditor.invoke('getMarkdown'), this.sanitizedTags])
-        this.$router.push({ path: '/questions/ask/review' });
+        // this.$router.push({ path: '/questions/ask/review' });
       }
     },
     getMarkdown(){
@@ -168,9 +168,6 @@ export default {
 </script>
 
 <style scoped>
-.container {
-  margin: 20px auto 20px auto;
-}
 label.label {
   font-size: 18px;
   font-weight: 700;

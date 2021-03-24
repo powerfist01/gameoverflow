@@ -1,8 +1,18 @@
 <template>
-  <div class="default">
+  <div>
     <Navbar />
     <notifications :max="3" position="top center" :width="400" />
-    <Nuxt />
+    <b-row>
+      <b-col cols="1" offset="1">
+        <p>This is hard</p>
+      </b-col>
+      <b-col cols="7">
+        <Nuxt />
+      </b-col>
+      <b-col cols="3">
+        <p>this is too hard</p>
+      </b-col>
+    </b-row>
     <Footer />
   </div>
 </template>
