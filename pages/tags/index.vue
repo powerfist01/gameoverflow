@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="container bv-example-row">
+    <div class="container">
       <p class="section">Tags</p>
       <p>A tag is a keyword or label that categorizes your question with other, similar questions. Using the right tags makes it easier for others to find and answer your question.</p>
       <b-form-input

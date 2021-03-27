@@ -1,18 +1,23 @@
 <template>
   <div>
-    <a href="#" class="tag">{{ name }}</a>
+    <a :href=getTaggedLink(name) class="tag">{{ name }}</a>
   </div>
 </template>
 
 <script>
 export default {
   name: "Tag",
-    props:{
-        name: {
-            type: String,
-            required: true
-        }
+  props:{
+      name: {
+          type: String,
+          required: true
+      }
+  },
+  methods: {
+    getTaggedLink(tag){
+      return '/questions/tagged/' + tag;
     }
+  }
 }
 </script>
 
