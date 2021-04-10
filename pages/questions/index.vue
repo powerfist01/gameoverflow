@@ -30,7 +30,7 @@
             </b-col>
             <b-col cols="10">
               <div class="main">
-                <b-card-title class="title"><NuxtLink :to='getQuestionLink(question.counter, question.title)'>{{ question.title }}</NuxtLink></b-card-title>
+                <b-card-title class="title"><a :href='getQuestionLink(question.counter, question.title)'>{{ question.title }}</a></b-card-title>
                 <TagArr :tags=question.tags />
                 <b-card-text class="text-muted small" align="right">
                   {{ question.createdAt }} <br>

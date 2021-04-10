@@ -150,9 +150,8 @@ export default {
     },
     reviewQuestion: function(){
       if(this.isInputValid()){
-        console.log("fhfhh")
         this.$store.commit('questions/addQuestion', [this.title, this.$refs.toastuiEditor.invoke('getMarkdown'), this.sanitizedTags])
-        // this.$router.push({ path: '/questions/ask/review' });
+        this.$router.push({ path: '/questions/ask/review' });
       }
     },
     getMarkdown(){
