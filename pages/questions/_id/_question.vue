@@ -2,6 +2,11 @@
   <div>
     <b-container>
       <h1>{{title}}</h1>
+      <b-row>
+        <b-col cols="3"><p><span class="key">Asked</span> 3 years, 9 months ago</p></b-col>
+        <b-col cols="3"><p><span class="key">Active</span> 31 days ago</p></b-col>
+        <b-col cols="3"><p><span class="key">Viewed</span> 68k times</p></b-col>
+      </b-row>
       <b-card no-body class="text">
         <div class="bg">
           <client-only>
@@ -13,6 +18,9 @@
       </b-card>
 
       <TagArr :tags=tags />
+
+      <p><a href="">Share</a></p>
+
       <p>{{ author }}</p>
     </b-container>
   </div>
@@ -43,5 +51,13 @@ export default {
 </script>
 
 <style scoped>
-
+p{
+  font-size: 14px;
+}
+.key{
+  color: rgb(124, 124, 124);
+}
+a{
+  text-decoration: none;
+}
 </style>
