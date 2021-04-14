@@ -19,9 +19,9 @@
 
       <TagArr :tags=tags />
 
-      <p><a href="">Share</a></p>
+      <!-- <p><a href="">Share</a></p> -->
 
-      <p>{{ author }}</p>
+      <Author :name="author" title="title"/>
     </b-container>
   </div>
 </template>
