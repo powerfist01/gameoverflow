@@ -40,4 +40,7 @@ p.section {
   width: 1000px;
   margin: 20px auto 20px auto;
 }
+.container-fluid{
+  margin-top: 10px;
+}
 </style>

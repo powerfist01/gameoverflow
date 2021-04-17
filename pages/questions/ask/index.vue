@@ -1,60 +1,65 @@
 <template>
   <div>
-    <div class="container">
-      <p class="section">
-        Ask a public question
-      </p>
-
-      <div class="question">
-        <label class="label" for="title">Title
-          <p class="description">
-            Be specific and imagine you’re asking a question to another person
+    <b-container fluid>
+      <b-row>
+        <b-col cols="2" offset="1"><LeftQuestionPanel /></b-col>
+        <b-col cols="6">
+          <p class="section">
+            Ask a public question
           </p>
-        </label>
-        <b-form-input
-          id="title"
-          placeholder="e.g. How can I check the ping in PUBG Lite?"
-          v-model="title"
-          required
-          size="sm"
-        ></b-form-input>
-        <p class="required" v-if="errorTitle">* Please enter valid title of the question.</p>
-        <br>
+          <div class="question">
+            <label class="label" for="title">Title
+              <p class="description">
+                Be specific and imagine you’re asking a question to another person
+              </p>
+            </label>
+            <b-form-input
+              id="title"
+              placeholder="e.g. How can I check the ping in PUBG Lite?"
+              v-model="title"
+              required
+              size="sm"
+            ></b-form-input>
+            <p class="required" v-if="errorTitle">* Please enter valid title of the question.</p>
+            <br>
 
-        <label class="label" for="body">Body
-          <p class="description">
-            Include all the information someone would need to answer your question
-          </p>
-        </label>
-        <client-only>
-          <editor
-            ref="toastuiEditor"
-            :options="editorOptions"
-            initialEditType='wysiwyg'
-            class="editor"
-          />
-        </client-only>
-        <p class="required" v-if="errorBody">* Please enter valid body of the question.</p>
-        <br>
+            <label class="label" for="body">Body
+              <p class="description">
+                Include all the information someone would need to answer your question
+              </p>
+            </label>
+            <client-only>
+              <editor
+                ref="toastuiEditor"
+                :options="editorOptions"
+                initialEditType='wysiwyg'
+                class="editor"
+              />
+            </client-only>
+            <p class="required" v-if="errorBody">* Please enter valid body of the question.</p>
+            <br>
 
-        <label class="label" for="tags">Tags
-          <p class="description">
-            Add up to 5 tags to describe what your question is about
-          </p>
-        </label>
-        <!-- Tag not more than 20 letters -->
-        <b-form-input
-          id="tags"
-          placeholder="e.g. (pubg ping pubg-lite)"
-          v-model="tags"
-          required
-          size="sm"
-        ></b-form-input>
-        <p class="required" v-if="errorTag">* Please enter valid tags of the question.</p>
-        <br>
-        <Button v-on:click.native="reviewQuestion" name="Review your Question" />
-      </div>
-    </div>
+            <label class="label" for="tags">Tags
+              <p class="description">
+                Add up to 5 tags to describe what your question is about
+              </p>
+            </label>
+            <!-- Tag not more than 20 letters -->
+            <b-form-input
+              id="tags"
+              placeholder="e.g. (pubg ping pubg-lite)"
+              v-model="tags"
+              required
+              size="sm"
+            ></b-form-input>
+            <p class="required" v-if="errorTag">* Please enter valid tags of the question.</p>
+            <br>
+            <Button v-on:click.native="reviewQuestion" name="Review your Question" />
+          </div>
+        </b-col>
+        <b-col cols="2"><RightQuestionPanel /></b-col>
+      </b-row>
+    </b-container>
   </div>
 </template>
 

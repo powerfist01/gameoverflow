@@ -1,29 +1,33 @@
 <template>
-  <div class="container">
-    <div class="header">
-      <p class="section">Review question</p>
-    </div>
-    <div class="question">
-      <p class="title">
-        {{ questionTitle }}
-      </p>
-      <b-card no-body class="text">
-        <div class="bg">
-          <client-only>
-            <Viewer
-              ref="toastuiEditor"
-              :initialValue = questionBody
-            />
-          </client-only>
+  <b-container fluid>
+    <b-row>
+      <b-col cols="2" offset="1"><LeftQuestionPanel /></b-col>
+      <b-col cols="6">
+        <p class="section">Review question</p>
+        <div class="question">
+          <p class="title">
+            {{ questionTitle }}
+          </p>
+          <b-card no-body class="text">
+            <div class="bg">
+              <client-only>
+                <Viewer
+                  ref="toastuiEditor"
+                  :initialValue = questionBody
+                />
+              </client-only>
+            </div>
+          </b-card>
+          <br>
+          <TagArr :tags=questionTags />
         </div>
-      </b-card>
-      <br>
-      <TagArr :tags=questionTags />
-    </div>
-    <div class="submit">
-      <b-button @click="askQuestion" size="sm">Submit</b-button>
-    </div>
-  </div>
+        <div class="submit">
+          <b-button @click="askQuestion" size="sm">Submit</b-button>
+        </div>
+      </b-col>
+      <b-col cols="2"><RightQuestionPanel /></b-col>
+    </b-row>
+  </b-container>
 </template>
 
 <script>
