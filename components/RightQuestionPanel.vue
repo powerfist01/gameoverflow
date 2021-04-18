@@ -1,5 +1,5 @@
 <template>
-  <b-card title="Right Panel" sub-title="Card subtitle">
+  <b-card title="Right Panel" sub-title="Card subtitle" style="background-color: purple;">
 
     <b-card-text>
       Some quick example text to build on the <em>card title</em> and make up the bulk of the card's
