@@ -10,7 +10,14 @@
             <b-col cols="3"><p><span class="key">Active</span> 31 days ago</p></b-col>
             <b-col cols="3"><p><span class="key">Viewed</span> 68k times</p></b-col>
           </b-row>
-          <b-card no-body class="text">
+          <!-- <hr> -->
+          <br>
+          <b-row>
+            <b-col cols="0.5">
+              <UpDownButton :votes=votes />
+            </b-col>
+            <b-col>
+              <b-card no-body class="text">
             <div class="bg">
               <client-only>
                 <Viewer
@@ -22,7 +29,6 @@
 
           <TagArr :tags=tags />
           <Author :name="author" title="title"/>
-          <hr>
           <hr>
           <p>Know someone who can answer? Share a link to this question via email, Twitter, or Facebook.</p>
           <h4>Your Answer</h4>
@@ -37,6 +43,8 @@
           </client-only>
           <br>
           <Button v-on:click.native="reviewAnswer" name="Post Your Answer" />
+            </b-col>
+          </b-row>
         </b-col>
         <b-col cols="2">
           <Button to="/questions/ask" name="Ask Question"/>
@@ -56,6 +64,7 @@ export default {
       title: '',
       tags: [],
       body: '',
+      votes: 0,
       author: '',
       editorOptions: {
         minHeight: '200px',

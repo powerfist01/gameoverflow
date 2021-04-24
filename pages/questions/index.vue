@@ -24,11 +24,11 @@
                         <p class="stat-name">answers</p>
                       </div>
                     </div>
-                    <div class="view">
+                    <!-- <div class="view">
                       <div class="views">
                         <p class="stat-name" style="margin-bottom: 0px;">1112 views</p>
                       </div>
-                    </div>
+                    </div> -->
                   </div>
                 </b-col>
                 <b-col cols="10">
@@ -36,7 +36,7 @@
                     <b-card-title class="title"><a :href='getQuestionLink(question.counter, question.title)'>{{ question.title }}</a></b-card-title>
                     <TagArr :tags=question.tags />
                     <b-card-text class="text-muted small" align="right">
-                      {{ question.createdAt }} <br>
+                      {{ $moment(question.createdAt).format('MMMM Do YYYY, h:mm:ss a') }} <br>
                       {{ question.author }}
                     </b-card-text>
                   </div>

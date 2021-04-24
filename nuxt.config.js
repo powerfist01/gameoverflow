@@ -20,6 +20,7 @@ export default {
   plugins: [
     '~/plugins/tui_editor.client.js',
     '~/plugins/vue-notification',
+    '~/plugins/moment.js'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -34,7 +35,9 @@ export default {
     // https://go.nuxtjs.dev/bootstrap
     'bootstrap-vue/nuxt',
     // https://go.nuxtjs.dev/axios
-    '@nuxtjs/axios'
+    '@nuxtjs/axios',
+    
+    '@nuxtjs/moment'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
