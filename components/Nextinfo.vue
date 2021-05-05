@@ -1,10 +1,10 @@
 <template>
   <div class="info">
-    <b-container>
-      <div class="header text-center">
+    <b-container fluid class="text-center">
+      <div class="header">
         Questions are everywhere, answers are on Game Overflow
       </div>
-      <div class="det text-center">
+      <div class="det">
         <p>
           Answer a question to share your knowledge with the world or in private
           with your team.
@@ -15,7 +15,7 @@
       </div>
     </b-container>
   </div>
-</template>
+</template> 
 
 <script>
 import Button from "@/components/Button.vue";
