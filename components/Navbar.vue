@@ -17,6 +17,8 @@
           <b-nav-item href="/questions">Questions</b-nav-item>
           <b-nav-item href="/tags">Tags</b-nav-item>
           <b-nav-item href="/questions/ask">Ask</b-nav-item>
+          <b-nav-item href="/settings">Settings</b-nav-item>
+          <b-nav-item href="/profile">Profile</b-nav-item>
         </b-navbar-nav>
 
         <!-- Right aligned nav items -->
