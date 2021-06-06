@@ -34,7 +34,7 @@
 
         <div class="coll">
           <p>
-            <a href="https://blogs.gameoverflow.com/">Blogs</a> 
+            <a href="/blogs">Blogs</a> 
             <a href="https://www.facebook.com/gameoverflow">Facebook</a> 
             <a href="https://www.twitter.com/gameoverflow">Twitter</a> 
             <a href="https://www.instagram.com/gameoverflow">Instagram</a>
