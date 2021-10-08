@@ -19,8 +19,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '~/plugins/tui_editor.client.js',
-    '~/plugins/vue-notification',
-    '~/plugins/moment.js'
+    '~/plugins/vue-notification'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
