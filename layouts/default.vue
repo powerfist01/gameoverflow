@@ -31,16 +31,16 @@ export default {
 }
 </script>
 <style>
+.default{
+    background: rgb(242, 245, 248);
+}
 p.section {
   font-size: 34px;
   font-weight: 600;
   color: rgb(41, 40, 40);
 }
 .container{
-  width: 1000px;
+  width: 2000px;
   margin: 20px auto 20px auto;
-}
-.container-fluid{
-  margin-top: 10px;
 }
 </style>
