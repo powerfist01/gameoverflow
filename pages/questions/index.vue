@@ -7,7 +7,6 @@
           <p class="section">
             All Questions
           </p>
-          <p>I am waitign </p>
           <div v-for="question in questions" :key="question._id">
             <b-card class="summary">
               <b-row>

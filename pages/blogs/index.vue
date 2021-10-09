@@ -1,7 +1,6 @@
 <template>
   <div class="container text-center">
-    <h6>BLOG</h6>
-    <h2>GameOverflow Latest News</h2>
+    <h6>BLOGS</h6>
     <p>Welcome to the GameOverflow blog. You’ve reached the front page for news on games, gaming platforms, game developers related announcements.</p>
     <Blog />
   </div>

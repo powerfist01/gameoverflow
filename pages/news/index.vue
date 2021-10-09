@@ -2,18 +2,20 @@
   <b-container class="news">
     <b-container>
       <b-row>
+        <Badge />
         <b-col cols="8">
           <p class="main-header">Top Stories</p>
           <p class="sub-header">Insights into the day’s biggest news.</p>
         </b-col>
         <b-col>
           <p class="main-header">Learn</p>
-          <p class="sub-header">Quickly explore and learn the gaming that matter.</p>
+          <p class="sub-header">
+            Quickly explore and learn the gaming that matter.
+          </p>
         </b-col>
       </b-row>
     </b-container>
     <hr />
-
   </b-container>
 </template>
 
