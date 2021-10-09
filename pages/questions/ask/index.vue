@@ -2,7 +2,7 @@
   <div>
     <b-container fluid>
       <b-row>
-        <b-col cols="2" offset="1"><LeftQuestionPanel /></b-col>
+        <b-col cols="2" offset="1"></b-col>
         <b-col cols="6">
           <p class="section">
             Ask a public question
@@ -57,7 +57,7 @@
             <Button v-on:click.native="reviewQuestion" name="Review your Question" />
           </div>
         </b-col>
-        <b-col cols="2"><RightQuestionPanel /></b-col>
+        <b-col cols="2"></b-col>
       </b-row>
     </b-container>
   </div>
