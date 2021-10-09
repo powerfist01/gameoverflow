@@ -1,9 +1,7 @@
 <template>
   <div>
-    <b-navbar toggleable="md" sticky="true" fixed="top">
-      <b-navbar-brand href="/">Game Overflow</b-navbar-brand>
-
-      <b-navbar-toggle target="nav-collapse"></b-navbar-toggle>
+    <b-navbar toggleable="md" variant="faded" type="light" sticky="true" fixed="top" class="navbar">
+      <b-navbar-brand href="/" class="main-company-name">Game Overflow</b-navbar-brand>
 
       <b-collapse id="nav-collapse" is-nav>
         <b-navbar-nav>
@@ -46,11 +44,21 @@
 
 <style scoped>
 .navbar {
+  height: 50px;
   position: fixed;
   background: rgb(249, 251, 251);
-  box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.5);
+  box-shadow: 0 2px 3px -1px rgba(0, 0, 0, 0.3);
+}
+.main-company-name{
+    vertical-align: center;
+    font-family: 'Canela-Black';
+    font-size: 30px;
+    font-weight: 700;
 }
 .search-bar {
   height: 40px;
+}
+#item{
+    color: red;
 }
 </style>

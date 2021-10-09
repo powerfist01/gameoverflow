@@ -28,7 +28,7 @@ export default {
 <style scoped>
 .button {
   background-position: center;
-  transition: background 0.8s;
+  transition: background 0.7s;
 }
 .button:hover {
   background: #7F00FF radial-gradient(circle, transparent 1%, #7F00FF 1%)
@@ -39,7 +39,7 @@ export default {
   background-size: 100%;
   transition: background 0s;
 }
-/* Button style */
+
 button {
   border: none;
   border-radius: 3px;
