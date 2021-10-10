@@ -2,7 +2,7 @@
   <div class="default">
     <Navbar />
     <notifications :max="3" position="top center" :width="400" />
-    <Nuxt style="margin-top: 60px;"/>
+    <Nuxt style="margin-top: 60px; margin-bottom: 20px;"/>
     <Footer />
   </div>
 </template>
