@@ -2,7 +2,7 @@
   <div>
     <b-container fluid>
       <b-row>
-        <b-col cols="2" offset="1" class="d-none d-md-block"><LeftQuestionPanel /></b-col>
+        <b-col cols="2" offset="1" class="d-none d-md-block"></b-col>
         <b-col cols="6">
           <p class="section">
             All Questions
@@ -44,7 +44,7 @@
               </b-row> 
             </b-card>
           </div></b-col>
-        <b-col cols="2" class="d-none d-lg-block"><RightQuestionPanel /></b-col>
+        <b-col cols="2" class="d-none d-lg-block"></b-col>
       </b-row>
     </b-container>
   </div>
