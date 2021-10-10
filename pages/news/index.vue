@@ -2,24 +2,42 @@
   <b-container class="news">
     <p class="main-header">Top Stories</p>
     <p class="sub-header">Insights into the day’s biggest news.</p>
+
     <div class="main-section">
-        <div class="content">
-            <img class="main-section-image" src="https://pixelz.cc/wp-content/uploads/2018/07/cryptocurrency-uhd-4k-wallpaper.jpg">
-            <p class="main-section-main-header">
-                Vitalik Buterin: El Salvador's Bitcoin Approach Is 'Contrary to the Ideals' of Crypto
-            </p>
-            <TagArr :tags=tags />
+      <div class="content">
+        <img
+          class="main-section-image"
+          src="https://pixelz.cc/wp-content/uploads/2018/07/cryptocurrency-uhd-4k-wallpaper.jpg"
+        />
+        <p class="main-section-main-header">
+          Vitalik Buterin: El Salvador's Bitcoin Approach Is 'Contrary to the
+          Ideals' of Crypto
+        </p>
+        <TagArr :tags="tags" />
+        <div class="footer-main">
+          <div class="footer-details-left">
+            <span class="author">Sujeet Singh</span>
+            <div class="dot"></div>
+            <span class="entry-date published"> Oct 10, 2021 </span>
+          </div>
+
+          <div class="footer-details-right">
+            <span class="bookmark"></span>
+            <div class="space"></div>
+            <span class="time-to-read"> 2 min read </span>
+          </div>
         </div>
+      </div>
     </div>
   </b-container>
 </template>
 
 <script>
 export default {
-    data(){
+  data() {
     return {
-      tags: ['Ethereum', 'Vitalik']
-    }
+      tags: ["Ethereum", "Vitalik"],
+    };
   },
 };
 </script>
@@ -43,26 +61,88 @@ export default {
 }
 .main-section {
   background-color: rgb(250, 250, 250);
-  border: 1px solid rgba(0, 0, 0, .1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
 }
-.content{
-    padding: 10px;
+.content {
+  padding: 10px;
 }
-.main-section-image{
-    width: 100%;
-    border-radius: 4px;
+.main-section-image {
+  width: 100%;
+  border-radius: 4px;
 }
-.main-section-image:hover{
-    width: 100%;
-    transform: translateY(-1px);
-    box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
+.main-section-image:hover {
+  width: 100%;
+  transform: translateY(-1px);
+  box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.5);
 }
-.main-section-main-header{
-    margin-top: 10px;
-    color: rgb(51, 51, 51);
-    line-height: 97%;
-    font-size: 27px;
-    font-weight: 600;
+.main-section-main-header {
+  margin-top: 10px;
+  color: rgb(51, 51, 51);
+  line-height: 97%;
+  font-size: 27px;
+  font-weight: 600;
+  font-family: "AkzidenzGrotesk-Bold";
+}
+
+.author,
+.entry-date.published {
+  font-size: 12px;
+  color: rgb(153, 154, 157);
+}
+
+.footer-main {
+  width: 100%;
+  min-width: 100%;
+  display: flex;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  justify-content: space-between;
+  margin-top: 16px;
+  margin-bottom: 0px;
+}
+.footer-details-left {
+  display: flex;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  justify-content: flex-start;
+}
+.footer-details-right {
+  display: flex;
+  flex-direction: row;
+  -webkit-box-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  justify-content: flex-end;
+}
+.dot {
+  border-radius: 50%;
+  background-color: rgb(0, 0, 0);
+  width: 2px;
+  height: 2px;
+  margin: 0px 7px;
+}
+.time-to-read{
     font-family: 'AkzidenzGrotesk-Bold';
+    font-size: 12px;
+    padding: 8px;
+    opacity: 1;
+    display: flex;
+    -webkit-box-align: center;
+    align-items: center;
+    text-decoration: none;
+    -webkit-box-pack: center;
+    justify-content: center;
+    white-space: nowrap;
+    border-radius: 3px;
+    border: none;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    box-shadow: rgb(0 0 0 / 15%) 0px 0px 15px;
+    transform: translateY(0px);
+    transition: all 0.2s ease-in-out 0s;
 }
 </style>
