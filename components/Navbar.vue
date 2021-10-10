@@ -1,6 +1,6 @@
 <template>
   <div>
-    <b-navbar toggleable="md" variant="faded" type="light" sticky="true" fixed="top" class="navbar">
+    <b-navbar toggleable="md" variant="faded" type="light" :sticky="true" fixed="top" class="navbar">
       <b-navbar-brand href="/" class="main-company-name">Game Overflow</b-navbar-brand>
 
       <b-collapse id="nav-collapse" is-nav>
