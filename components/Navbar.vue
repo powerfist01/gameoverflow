@@ -52,13 +52,19 @@
 .main-company-name{
     vertical-align: center;
     font-family: 'Canela-Black';
-    font-size: 30px;
+    font-size: 32px;
     font-weight: 700;
 }
-.search-bar {
-  height: 40px;
+.navbar-light .navbar-nav .nav-link {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.6);
 }
-#item{
-    color: red;
+.form-control {
+    font-size: 14px;
+    width: 100%;
+    height: 33px;
+}
+.btn-sm, .btn-group-sm > .btn {
+    font-size: 14px;
 }
 </style>
