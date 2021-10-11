@@ -1,6 +1,7 @@
 <template>
   <div>
     {{tag}}
+    {{name}}
   </div>
 </template>
 
@@ -8,7 +9,8 @@
 export default {
   data(){
     return {
-      tag: ''
+      tag: '',
+      name: 'sujeet'
     }
   },
   created(){
