@@ -80,13 +80,6 @@ export default {
 </script>
 
 <style scoped>
-.news-content {
-  text-align: left;
-  width: 70%;
-}
-a {
-  text-decoration: none;
-}
 .main-header {
   font-family: "Canela-Black";
   color: rgb(51, 51, 51);
