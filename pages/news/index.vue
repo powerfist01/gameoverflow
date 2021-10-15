@@ -33,40 +33,45 @@
       </NuxtLink>
     </div>
 
-    <div class="section">
-      <NuxtLink to="/news/6160a240f58ee51020a8a2da">
+    <div v-for="news in data" :key="news._id">
+      <div class="section">
         <div class="content">
           <b-row>
             <b-col cols="4">
-              <img
-                class="section-image"
-                src="https://pixelz.cc/wp-content/uploads/2018/07/cryptocurrency-uhd-4k-wallpaper.jpg"
-              />
+              <NuxtLink to="/news/6160a240f58ee51020a8a2da">
+                <img class="section-image" :src=news.image />
+              </NuxtLink>
             </b-col>
             <b-col cols="8" class="section-right">
-              <p class="section-main-header">
-                Edward Snowden: CBDCs Are 'Cryptofascist Currencies' That Could
-                'Casually Annihilate' Savings
-              </p>
-              <TagArr :tags="tags" />
+              <NuxtLink to="/news/6160a240f58ee51020a8a2da">
+                <p class="section-main-header">
+                  {{ news.heading }}
+                </p>
+              </NuxtLink>
+              <TagArr :tags="news.tags" />
               <div class="footer-main">
                 <div class="footer-details-left">
-                  <span class="author">Sujeet Singh</span>
+                  <span class="author">{{ news.author }}</span>
                   <div class="dot"></div>
-                  <span class="entry-date published"> Oct 10, 2021 </span>
+                  <span class="entry-date published">
+                    {{ news.createdAt }}
+                  </span>
                 </div>
 
                 <div class="footer-details-right">
                   <span class="bookmark"></span>
                   <div class="space"></div>
-
-                  <span class="time-to-read"> 2 min read </span>
+                  <NuxtLink to="/news/6160a240f58ee51020a8a2da">
+                    <span class="time-to-read">
+                      {{ news.timeToRead }} read</span
+                    >
+                  </NuxtLink>
                 </div>
               </div>
             </b-col>
           </b-row>
         </div>
-      </NuxtLink>
+      </div>
     </div>
   </b-container>
 </template>
@@ -75,8 +80,25 @@
 export default {
   data() {
     return {
+      data: [],
       tags: ["Ethereum", "Vitalik"],
     };
+  },
+  created() {},
+  async fetch() {
+    try {
+      let path = this.$route.path;
+      const newsId = "6160a240f58ee51020a8a2da";
+      let url = `${this.$axios.defaults.baseURL}/news/`;
+      let res = await this.$axios.get(url);
+      if (res.data.success) {
+        this.data = res.data.data;
+      } else {
+        console.log("failed");
+      }
+    } catch (err) {
+      console.log(err);
+    }
   },
 };
 </script>
@@ -200,7 +222,7 @@ a {
 .section-image:hover {
   width: 100%;
   transform: translateY(-1px);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
 }
 .section-main-header {
   margin-top: 10px;
