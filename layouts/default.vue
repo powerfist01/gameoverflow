@@ -2,7 +2,7 @@
   <div class="default">
     <Navbar />
     <notifications :max="3" position="top center" :width="400" />
-    <Nuxt />
+    <Nuxt style="margin-top: 60px;"/>
     <Footer />
   </div>
 </template>
@@ -31,16 +31,4 @@ export default {
 }
 </script>
 <style>
-p.section {
-  font-size: 34px;
-  font-weight: 600;
-  color: rgb(41, 40, 40);
-}
-.container{
-  width: 1000px;
-  margin: 20px auto 20px auto;
-}
-.container-fluid{
-  margin-top: 10px;
-}
 </style>
